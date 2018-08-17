@@ -30,7 +30,8 @@ const appRoutes: Routes = [
     DashboardAdminComponent,
     LoginUserComponent,
     DashboardUserComponent,
-    NAWGegevensComponent
+    NAWGegevensComponent,
+    OpeningPageComponent
   ],
   imports: [
     BrowserModule,

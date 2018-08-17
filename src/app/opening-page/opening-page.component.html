@@ -1,18 +1,6 @@
 
 <div class="container">
-<h1>Welkom</h1>
-	<form #LoginForm="ngForm">
-		<div class="form">
-			<label for="name">Gebruikersnaam</label>
-			<br><input type="text" class="form-control" id="name" required   name="gebruikersnaam" (keyup) = "onKey($event)"><br>
-		</div>
-
-		<div class="form">
-			<label for = "wachtwoord">Wachtwoord</label>
-			<br><input type="password" class="form-control" id="wachtwoord" required (keyup) = "onKeyww($event)">
-
-			<br><button type="submit" class="button" (click)="onClick($event)"> Login</button>
-		</div>
-	</form>
-
+	<h1>Welkom</h1>
+	<button id = "Adminbutton" (click)="RedirectToAdmin()">Admin</button> <br>
+	<button id = "UserButton" (click)="RedirectToUser()" >User</button>
 </div>
