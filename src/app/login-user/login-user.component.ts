@@ -32,7 +32,7 @@ export class LoginUserComponent implements OnInit {
   	}
 
   	onClick(event: any){
-  		this.user = new Admin(this.gebruikersnaam,this.wachtwoord);
+  		this.user = new User(this.gebruikersnaam,this.wachtwoord);
   		console.log(this.user);
   		this.Inloggen(this.user);
   	}

@@ -15,6 +15,7 @@ export class NAWGegevensComponent implements OnInit {
 	public wachtwoord : string = ''; 
 	public postcode : string = '';
 
+
   constructor(private nawgegevensservice: NawgegevensService) { }
 
   ngOnInit() {
@@ -35,24 +36,8 @@ export class NAWGegevensComponent implements OnInit {
    	Opslaan(user){
    		console.log(this.user);
    		this.nawgegevensservice.opslaanNAW(user).subscribe((response) => {
-   			console.log(response);
-   		}
-   	}
-   	
-
-
-
-   // 		  	this.loginuserservice.inlogMethode(user).subscribe((response) => {
-			// console.log(response);
-			// var message = JSON.stringify(response);
-			// console.log(message)
-			// var cutstring = message.substring(12,19) 			// dit is zeker niet hoe het hoort, maar het werkt 
-			// console.log(cutstring)
-			// console.log(user);
-
-			// if (cutstring == "Success"){
-			// 	//this.router.navigate(['DashAdmin'])
-			// }
-			// });
-
-
+   			console.log(response)
+ 
+   		});			
+  	};
+}
