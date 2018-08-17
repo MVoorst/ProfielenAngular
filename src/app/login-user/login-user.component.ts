@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+/*import { Component, OnInit } from '@angular/core';
 import {Admin} from "../admin";
-import {LoginService} from './login.service';
+import {LoginUserService} from './login-user.service';
 import {HttpClient} from '@angular/common/http';
 import { RouterModule, Router} from '@angular/router';
 
@@ -16,7 +16,7 @@ export class LoginAdminComponent implements OnInit {
 	public gebruikersnaam: string = ''
 	public wachtwoord: string;
 
-	constructor(private httpclient: HttpClient, private loginservice: LoginService, private router: Router){}
+	constructor(private httpclient: HttpClient, private loginuserservice: LoginUserService, private router: Router){}
 
   	ngOnInit() {
  	}
@@ -38,7 +38,7 @@ export class LoginAdminComponent implements OnInit {
 
   	Inloggen(admin){															//USERRRRRR
   			console.log(admin);
-  			this.loginservice.inlogMethode(admin).subscribe((response) => {
+  			this.loginuserservice.inlogMethode(admin).subscribe((response) => {
 			console.log(response);
 			var message = JSON.stringify(response);
 			console.log(message)
@@ -52,4 +52,4 @@ export class LoginAdminComponent implements OnInit {
 			});
 			
   	};
-}
+}*/
