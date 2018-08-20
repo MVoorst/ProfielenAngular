@@ -1,5 +1,6 @@
 export class User {
 	constructor(
+		public id: number,
 		public gebruikersnaam: string,
 		public wachtwoord: string,
 		public emailadress: string,

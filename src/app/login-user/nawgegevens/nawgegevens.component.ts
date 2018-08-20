@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User} from "../user";
 import { HttpClient} from '@angular/common/http';
 import { RouterModule, Router} from '@angular/router';
-//import { LoginUserComponent } from './login-user.component';
+import { NawgegevensService } from './nawgegevens.service';
 import { GlobalService } from '../../global.service';
 
 @Component({
@@ -10,8 +10,10 @@ import { GlobalService } from '../../global.service';
   templateUrl: './nawgegevens.component.html',
   styleUrls: ['./nawgegevens.component.css']
 })
-export class NAWGegevensComponent implements OnInit {
 
+
+export class NAWGegevensComponent implements OnInit {
+  public id: number = 0;
 	public gebruikersnaam: string = this.globalservice.gebruiker.gebruikersnaam;
   public wachtwoord: string = this.globalservice.gebruiker.wachtwoord;
 
@@ -28,7 +30,7 @@ export class NAWGegevensComponent implements OnInit {
   public linkedinadres: string;
   public githubadres: string;
 
-  constructor(private globalservice: GlobalService) { }
+  constructor(private globalservice: GlobalService, private nawgegevensservice: NawgegevensService) { }
 
 
   ngOnInit() {
@@ -38,21 +40,24 @@ export class NAWGegevensComponent implements OnInit {
 
   onKey(event: any) {
   	this.postcode = event.target.value;
-  		}
+  }
 
   onClick(event: any){
     console.log(this.gebruikersnaam);
     console.log(this.postcode);
   	this.globalservice.gebruiker.postcode = this.postcode;
   	console.log(this.globalservice.gebruiker.postcode);
-   		}
+    this.Opslaan(this.globalservice.gebruiker)
+   }
 
 
-   	Opslaan(user){
-   		//console.log(this.user);
-   		// this.nawgegevensservice.opslaanNAW(user).subscribe((response) => {
-   		// 	console.log(response)
+   	Opslaan(newNAW){
+      console.log("In Opslaan");
+      console.log(newNAW);
+   	  this.nawgegevensservice.OpslaanNAW(newNAW).subscribe((response) => {
+   		console.log(response);
 
    		//this.router.navigate(['Vraag'])	
- 			}
-	};
+ 		}
+  }
+}
