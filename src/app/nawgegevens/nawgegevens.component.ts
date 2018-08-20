@@ -29,7 +29,7 @@ export class NAWGegevensComponent implements OnInit {
   public githubadres: string;
 
 
-  constructor(private nawgegevensservice: NawgegevensService) { }
+  constructor(private nawgegevensservice: NawgegevensService, private router: Router) { }
 
   ngOnInit() {
   }
@@ -48,9 +48,9 @@ export class NAWGegevensComponent implements OnInit {
 
    	Opslaan(user){
    		console.log(this.user);
-   		this.nawgegevensservice.opslaanNAW(user).subscribe((response) => {
-   			console.log(response)
- 
-   		});			
-  	};
-}
+   		// this.nawgegevensservice.opslaanNAW(user).subscribe((response) => {
+   		// 	console.log(response)
+
+   		this.router.navigate(['Vraag'])	
+ 			}
+	};

@@ -72,7 +72,7 @@ export class LoginUserComponent implements OnInit {
 			console.log(user);
 
 			if (cutstring == "Success"){
-				//this.router.navigate(['DashAdmin'])
+				this.router.navigate(['NAW'])
 			}
 			});
 			
