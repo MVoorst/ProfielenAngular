@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {User} from "../user";
-import {HttpClient} from '@angular/common/http';
+import { User} from "../user";
+import { HttpClient} from '@angular/common/http';
 import { RouterModule, Router} from '@angular/router';
-import {LoginService} from '../login-admin/login.service';
+import { LoginService } from '../login-admin/login.service';
+import { GlobalService } from '../global.service';
+
 
 @Component({
   selector: 'app-login-user',
@@ -11,7 +13,7 @@ import {LoginService} from '../login-admin/login.service';
 })
 
 export class LoginUserComponent implements OnInit {
-	
+	user: Object;
 
 	public gebruikersnaam: string;
 	public wachtwoord: string;
@@ -28,7 +30,7 @@ export class LoginUserComponent implements OnInit {
   public linkedinadres: string;
   public githubadres: string;
 
-	constructor(private httpclient: HttpClient, private loginservice: LoginService, private router: Router){}
+	constructor(private httpclient: HttpClient, private loginservice: LoginService, private router: Router, private globalservice: GlobalService){}
 
   	ngOnInit() {
  	}
@@ -42,28 +44,30 @@ export class LoginUserComponent implements OnInit {
   	}
 
   	onClick(event: any){
-  		User = new User(  this.gebruikersnaam,
-                             this.wachtwoord, 
-                             this.emailadress, 
-                             this.voornaam, 
-                             this.tussenvoegsel,
-                             this.achternaam, 
-                             this.geslacht, 
-                             this.geboortedatum, 
-                             this.huisnummer,
-                             this.straat,
-                             this.postcode,
-                             this.woonplaats,
-                             this.linkedinadres,
-                             this.githubadres
-                             );
-  		console.log(this.user);
-  		this.Inloggen(this.user);
+  		this.globalservice.gebruiker = new User(  
+                        this.gebruikersnaam,
+                        this.wachtwoord, 
+                        this.emailadress, 
+                        this.voornaam, 
+                        this.tussenvoegsel,
+                        this.achternaam, 
+                        this.geslacht, 
+                        this.geboortedatum, 
+                        this.huisnummer,
+                        this.straat,
+                        this.postcode,
+                        this.woonplaats,
+                        this.linkedinadres,
+                        this.githubadres
+                        );
+  		console.log(this.gebruikersnaam);
+  		this.Inloggen(this.globalservice.gebruiker);
   	}
 
   	Inloggen(user){															//USERRRRRR
-  			console.log(user);
-  			this.loginservice.inlogMethodeUser(user).subscribe((response) => {
+  		console.log(this.globalservice.gebruiker);
+      console.log(user);
+  		this.loginservice.inlogMethodeUser(user).subscribe((response) => {
 			console.log(response);
 			var message = JSON.stringify(response);
 			console.log(message)

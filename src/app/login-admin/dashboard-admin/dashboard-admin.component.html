@@ -1,7 +1,18 @@
-<div class="container">
-	
-	<h1>Admin dashboard</h1>
-	<div><p><button type="submit" class="button" (click)="onClick($event)"> Nieuwe student</button></p></div>
+<div>
+	<h1> Dit is voor het dashboard! </h1>
 
-<div class = "avatar">
+	<h2> Maak user aan </h2>
+	<form>
+		<input type="text" class="form-control" id="newUser" required (keyup) = "onKeyUsername($event)" placeholder="Naam">
+		<br><input type="text" class="form-control" id="newEmail" required (keyup) = "onKeyEmail($event)" placeholder="Email">
+		<br><button type="text" (click)="NewUser()">Nieuwe gebruiker</button>
+	</form>
+
 </div>
+
+
+
+
+
+
+

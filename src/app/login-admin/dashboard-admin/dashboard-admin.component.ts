@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import { RouterModule, Router} from '@angular/router';
 
 
 @Component({
@@ -10,9 +8,29 @@ import { RouterModule, Router} from '@angular/router';
 })
 export class DashboardAdminComponent implements OnInit {
 
+	private gebruikersnaam: string = ''
+	private emailadres: string = ''
+	user: object;
+
+
   constructor() { }
 
   ngOnInit() {
   }
 
+
+  onKeyUsername(event:any) {
+  	this.gebruikersnaam = event.target.value;
+  }
+
+  onKeyEmail(event:any) {
+  	this.emailadres = event.target.value;
+
+  }
+
+
+  NewUser(user){
+
+
+  }
 }
