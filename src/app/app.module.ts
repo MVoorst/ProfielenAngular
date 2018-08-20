@@ -7,8 +7,8 @@ import { RouterModule, Routes} from '@angular/router';
 import { AppComponent } from './app.component';
 import { LoginAdminComponent } from './login-admin/login-admin.component';
 import { LoginUserComponent } from './login-user/login-user.component';
-import { DashboardUserComponent } from './dashboard-user/dashboard-user.component';
-import { NAWGegevensComponent } from './nawgegevens/nawgegevens.component';
+import { DashboardUserComponent } from './login-user/dashboard-user/dashboard-user.component';
+import { NAWGegevensComponent } from './login-user/nawgegevens/nawgegevens.component';
 import { OpeningPageComponent} from './opening-page/opening-page.component';
 import { VraagComponent } from './vraag/vraag.component';
 import { CreeerStudentComponent } from './login-admin/dashboard-admin/creeer-student/creeer-student.component'
@@ -22,7 +22,7 @@ const appRoutes: Routes = [
   {path: 'DashAdmin', component : DashboardAdminComponent},
   {path: 'NAW', component: NAWGegevensComponent},
   {path: 'Vraag', component: VraagComponent},
-  {path: 'Creeerstudent', component: CreeerStudentComponent}
+  {path: 'CreeerStudent', component: CreeerStudentComponent}
   
 ]
 
