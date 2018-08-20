@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { User} from "../user";
 import { HttpClient} from '@angular/common/http';
 import { RouterModule, Router} from '@angular/router';
 import { LoginService } from '../login-admin/login.service';
 import { GlobalService } from '../global.service';
+import { User } from '../user';
 
 
 @Component({
@@ -15,6 +15,7 @@ import { GlobalService } from '../global.service';
 export class LoginUserComponent implements OnInit {
 	user: Object;
 
+  public id: number = 0;
 	public gebruikersnaam: string;
 	public wachtwoord: string;
   public emailadress: string;
@@ -44,7 +45,8 @@ export class LoginUserComponent implements OnInit {
   	}
 
   	onClick(event: any){
-  		this.globalservice.gebruiker = new User(  
+  		this.globalservice.gebruiker = new User(
+                        this.id,
                         this.gebruikersnaam,
                         this.wachtwoord, 
                         this.emailadress, 
