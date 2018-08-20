@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {User} from "../user";
-import {NawgegevensService} from "./nawgegevens.service";
-import {HttpClient} from '@angular/common/http';
+import { User} from "../user";
+import { NawgegevensService} from "./nawgegevens.service";
+import { HttpClient} from '@angular/common/http';
 import { RouterModule, Router} from '@angular/router';
+import { LoginUserComponent } from '../login-user/login-user.component';
 
 @Component({
   selector: 'app-nawgegevens',
@@ -11,16 +12,29 @@ import { RouterModule, Router} from '@angular/router';
 })
 export class NAWGegevensComponent implements OnInit {
 
-	public gebruikersnaam : string = '';
-	public wachtwoord : string = ''; 
-	public postcode : string = '';
+	public gebruikersnaam: string;
+  public wachtwoord: string;
+
+  public emailadress: string;
+  public voornaam: string;
+  public tussenvoegsel: string;
+  public achternaam: string;
+  public geslacht: boolean;
+  public geboortedatum: string;
+  public huisnummer: string;
+  public straat: string;
+  public postcode: string;
+  public woonplaats: string;
+  public linkedinadres: string;
+  public githubadres: string;
+
 
   constructor(private nawgegevensservice: NawgegevensService) { }
 
   ngOnInit() {
   }
 
-  	 user: object;
+  
 
   	onKey(event: any) {
   	this.postcode = event.target.value;
@@ -28,31 +42,15 @@ export class NAWGegevensComponent implements OnInit {
 
   	onClick(event: any){
   		console.log(this.postcode);
-  		this.user = new User(this.gebruikersnaam, this.postcode);
+  		LoginUserComponent.user = (LoginUserComponent.user.gebruikersnaam, this.postcode);
   		this.Opslaan(this.user)
    		}
 
    	Opslaan(user){
    		console.log(this.user);
    		this.nawgegevensservice.opslaanNAW(user).subscribe((response) => {
-   			console.log(response);
-   		}
-   	}
-   	
-
-
-
-   // 		  	this.loginuserservice.inlogMethode(user).subscribe((response) => {
-			// console.log(response);
-			// var message = JSON.stringify(response);
-			// console.log(message)
-			// var cutstring = message.substring(12,19) 			// dit is zeker niet hoe het hoort, maar het werkt 
-			// console.log(cutstring)
-			// console.log(user);
-
-			// if (cutstring == "Success"){
-			// 	//this.router.navigate(['DashAdmin'])
-			// }
-			// });
-
-
+   			console.log(response)
+ 
+   		});			
+  	};
+}

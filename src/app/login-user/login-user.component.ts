@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {User} from "../user";
-import {LoginUserService} from './login-user.service';
 import {HttpClient} from '@angular/common/http';
 import { RouterModule, Router} from '@angular/router';
+import {LoginService} from '../login-admin/login.service';
 
 @Component({
   selector: 'app-login-user',
@@ -26,14 +26,12 @@ export class LoginUserComponent implements OnInit {
   public postcode: string;
   public woonplaats: string;
   public linkedinadres: string;
-  public githubadres: string
+  public githubadres: string;
 
-	constructor(private httpclient: HttpClient, private loginuserservice: LoginUserService, private router: Router){}
+	constructor(private httpclient: HttpClient, private loginservice: LoginService, private router: Router){}
 
   	ngOnInit() {
  	}
-
-  	user: object;
 
   	onKey(event: any) {
   		this.gebruikersnaam = event.target.value;
@@ -44,7 +42,7 @@ export class LoginUserComponent implements OnInit {
   	}
 
   	onClick(event: any){
-  		this.user = new User(  this.gebruikersnaam,
+  		User = new User(  this.gebruikersnaam,
                              this.wachtwoord, 
                              this.emailadress, 
                              this.voornaam, 
@@ -65,7 +63,7 @@ export class LoginUserComponent implements OnInit {
 
   	Inloggen(user){															//USERRRRRR
   			console.log(user);
-  			this.loginuserservice.inlogMethode(user).subscribe((response) => {
+  			this.loginservice.inlogMethodeUser(user).subscribe((response) => {
 			console.log(response);
 			var message = JSON.stringify(response);
 			console.log(message)
