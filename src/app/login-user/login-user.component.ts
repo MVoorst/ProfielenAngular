@@ -13,8 +13,20 @@ import { RouterModule, Router} from '@angular/router';
 export class LoginUserComponent implements OnInit {
 	
 
-	public gebruikersnaam: string = ''
+	public gebruikersnaam: string;
 	public wachtwoord: string;
+  public emailadress: string;
+  public voornaam: string;
+  public tussenvoegsel: string;
+  public achternaam: string;
+  public geslacht: boolean;
+  public geboortedatum: string;
+  public huisnummer: string;
+  public straat: string;
+  public postcode: string;
+  public woonplaats: string;
+  public linkedinadres: string;
+  public githubadres: string
 
 	constructor(private httpclient: HttpClient, private loginuserservice: LoginUserService, private router: Router){}
 
@@ -32,7 +44,21 @@ export class LoginUserComponent implements OnInit {
   	}
 
   	onClick(event: any){
-  		this.user = new Admin(this.gebruikersnaam,this.wachtwoord);
+  		this.user = new User(  this.gebruikersnaam,
+                             this.wachtwoord, 
+                             this.emailadress, 
+                             this.voornaam, 
+                             this.tussenvoegsel,
+                             this.achternaam, 
+                             this.geslacht, 
+                             this.geboortedatum, 
+                             this.huisnummer,
+                             this.straat,
+                             this.postcode,
+                             this.woonplaats,
+                             this.linkedinadres,
+                             this.githubadres
+                             );
   		console.log(this.user);
   		this.Inloggen(this.user);
   	}

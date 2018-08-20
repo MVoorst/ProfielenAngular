@@ -38,7 +38,7 @@ export class LoginAdminComponent implements OnInit {
 
   	Inloggen(admin){
   			console.log(admin);
-  			this.loginservice.inlogMethode(admin).subscribe((response) => {
+  			this.loginservice.inlogMethodeAdmin(admin).subscribe((response) => {
 			console.log(response);
 			var message = JSON.stringify(response);
 			console.log(message)
