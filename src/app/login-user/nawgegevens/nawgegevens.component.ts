@@ -28,8 +28,8 @@ export class NAWGegevensComponent implements OnInit {
   public linkedinadres: string;
   public githubadres: string;
 
-
   constructor(private globalservice: GlobalService) { }
+
 
   ngOnInit() {
   }
@@ -47,11 +47,13 @@ export class NAWGegevensComponent implements OnInit {
   	console.log(this.globalservice.gebruiker.postcode);
    		}
 
-   Opslaan(user){
+
+   	Opslaan(user){
    		//console.log(this.user);
-   		//this.nawgegevensservice.opslaanNAW(user).subscribe((response) => {
-   		//console.log(response)
- 
-   		});			
-  	};
-}
+   		// this.nawgegevensservice.opslaanNAW(user).subscribe((response) => {
+   		// 	console.log(response)
+
+   		//this.router.navigate(['Vraag'])	
+ 			}
+	};
+

@@ -1,0 +1,11 @@
+<div class="container">
+	
+	<h1> Vraag</h1>
+	<form #NAWForm="ngForm">
+		<div class="form">
+			<label for="vraag1">Wie gaat Game of Trones winnen? </label><br><br>
+			<textarea rows="6" cols="100" type="text" class="form-control" id="antwoord1" required   name="antwoord1" (keyup) = "onKey($event)"></textarea><br>
+			<br><button type="submit" class="button" (click)="onClick($event)"> Opslaan</button>
+		</div>
+	</form>
+</div>
