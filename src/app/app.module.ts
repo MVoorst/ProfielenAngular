@@ -2,13 +2,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { DashboardAdminComponent} from './dashboard-admin/dashboard-admin.component'
+import { DashboardAdminComponent} from './login-admin/dashboard-admin/dashboard-admin.component'
 import { RouterModule, Routes} from '@angular/router';
 import { AppComponent } from './app.component';
 import { LoginAdminComponent } from './login-admin/login-admin.component';
 import { LoginUserComponent } from './login-user/login-user.component';
-import { DashboardUserComponent } from './dashboard-user/dashboard-user.component';
-import { NAWGegevensComponent } from './nawgegevens/nawgegevens.component';
+import { DashboardUserComponent } from './login-user/dashboard-user/dashboard-user.component';
+import { NAWGegevensComponent } from './login-user/nawgegevens/nawgegevens.component';
 import { OpeningPageComponent} from './opening-page/opening-page.component';
 
 
