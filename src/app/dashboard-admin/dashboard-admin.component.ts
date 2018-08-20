@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {}
 
 @Component({
   selector: 'app-dashboard-admin',
@@ -7,9 +8,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardAdminComponent implements OnInit {
 
+	private gebruikersnaam: string = ''
+	private emailadres: string = ''
+	user: object;
+
+
   constructor() { }
 
   ngOnInit() {
   }
 
+
+  onKeyUsername(event:any) {
+  	this.gebruikersnaam = event.target.value;
+  }
+
+  onKeyEmail(event:any) {
+  	this.emailadres = event.target.value;
+
+  }
+
+
+  NewUser(user){
+
+
+  }
 }

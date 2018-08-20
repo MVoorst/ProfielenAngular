@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {User} from "../user";
-import {LoginUserService} from './login-user.service';
 import {HttpClient} from '@angular/common/http';
 import { RouterModule, Router} from '@angular/router';
+import {LoginService} from '../login-admin/login.service';
 
 @Component({
   selector: 'app-login-user',
@@ -13,15 +13,25 @@ import { RouterModule, Router} from '@angular/router';
 export class LoginUserComponent implements OnInit {
 	
 
-	public gebruikersnaam: string = ''
+	public gebruikersnaam: string;
 	public wachtwoord: string;
+  public emailadress: string;
+  public voornaam: string;
+  public tussenvoegsel: string;
+  public achternaam: string;
+  public geslacht: boolean;
+  public geboortedatum: string;
+  public huisnummer: string;
+  public straat: string;
+  public postcode: string;
+  public woonplaats: string;
+  public linkedinadres: string;
+  public githubadres: string;
 
-	constructor(private httpclient: HttpClient, private loginuserservice: LoginUserService, private router: Router){}
+	constructor(private httpclient: HttpClient, private loginservice: LoginService, private router: Router){}
 
   	ngOnInit() {
  	}
-
-  	user: object;
 
   	onKey(event: any) {
   		this.gebruikersnaam = event.target.value;
@@ -32,14 +42,28 @@ export class LoginUserComponent implements OnInit {
   	}
 
   	onClick(event: any){
-  		this.user = new User(this.gebruikersnaam,this.wachtwoord);
+  		User = new User(  this.gebruikersnaam,
+                             this.wachtwoord, 
+                             this.emailadress, 
+                             this.voornaam, 
+                             this.tussenvoegsel,
+                             this.achternaam, 
+                             this.geslacht, 
+                             this.geboortedatum, 
+                             this.huisnummer,
+                             this.straat,
+                             this.postcode,
+                             this.woonplaats,
+                             this.linkedinadres,
+                             this.githubadres
+                             );
   		console.log(this.user);
   		this.Inloggen(this.user);
   	}
 
   	Inloggen(user){															//USERRRRRR
   			console.log(user);
-  			this.loginuserservice.inlogMethode(user).subscribe((response) => {
+  			this.loginservice.inlogMethodeUser(user).subscribe((response) => {
 			console.log(response);
 			var message = JSON.stringify(response);
 			console.log(message)
