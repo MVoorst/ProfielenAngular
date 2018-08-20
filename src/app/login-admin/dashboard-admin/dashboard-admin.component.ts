@@ -10,9 +10,18 @@ import { RouterModule, Router} from '@angular/router';
 })
 export class DashboardAdminComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
+
+
+
+  	
+  	onClick(event: any){
+  		this.router.navigate(['CreeerStudent'])	
+ 			}
+	};
+
 
 }

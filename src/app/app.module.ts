@@ -21,7 +21,8 @@ const appRoutes: Routes = [
   {path: 'UserLogin', component: LoginUserComponent},
   {path: 'DashAdmin', component : DashboardAdminComponent},
   {path: 'NAW', component: NAWGegevensComponent},
-  {path: 'Vraag', component: VraagComponent}
+  {path: 'Vraag', component: VraagComponent},
+  {path: 'Creeerstudent', component: CreeerStudentComponent}
   
 ]
 
