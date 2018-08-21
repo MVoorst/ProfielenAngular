@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { RouterModule, Router} from '@angular/router';
+import { User } from '../../../user';
+import { CreeerStudentService } from './creeer-student.service'
+
 
 @Component({
   selector: 'app-creeer-student',
@@ -9,10 +12,36 @@ import { RouterModule, Router} from '@angular/router';
 })
 export class CreeerStudentComponent implements OnInit {
 
-  constructor() { }
+	public gebruikersnaam: string = ''
+	public emailadres: string;
+	gebruiker : User;
+
+  constructor(private httpclient: HttpClient, private creeerstudentservice: CreeerStudentService, private router: Router) { }
 
   ngOnInit() {
   }
 
-}
+admin: object;
 
+  	onKey(event: any) {
+  		this.gebruikersnaam = event.target.value;
+  	}
+
+  	onKeyemail(event: any) {
+  		this.emailadres = event.target.value;
+  	}
+
+  	onClick(event: any){
+		this.gebruiker = new User();
+		this.gebruiker.gebruikersnaam = this.gebruikersnaam;
+		this.gebruiker.emailadress = this.emailadres;
+		console.log(this.gebruiker.emailadress);
+		this.Aanmaken(this.gebruiker);
+		}
+
+		Aanmaken (user) {
+			console.log(this.gebruiker.emailadress);
+			this.creeerstudentservice.maakDeelnemerAan(user).subscribe((response) => {
+   			console.log(response);
+   			}
+   		}

@@ -10,12 +10,6 @@ import { RouterModule, Router} from '@angular/router';
 })
 export class DashboardAdminComponent implements OnInit {
 
-	private gebruikersnaam: string = ''
-	private emailadres: string = ''
-	user: object;
-
-
-
   constructor(private router: Router) { }
 
 
