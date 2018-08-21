@@ -3,7 +3,7 @@ export class User {
 		public id: number,
 		public gebruikersnaam: string,
 		public wachtwoord: string,
-		public emailadress: string,
+		public emailadres: string,
 		public voornaam: string,
 		public tussenvoegsel: string,
 		public achternaam: string,

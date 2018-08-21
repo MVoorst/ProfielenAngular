@@ -13,12 +13,10 @@ import { User } from '../user';
 })
 
 export class LoginUserComponent implements OnInit {
-	user: Object;
-
-  public id: number = 0;
+  public id: number;
 	public gebruikersnaam: string;
 	public wachtwoord: string;
-  public emailadress: string;
+  public emailadres: string;
   public voornaam: string;
   public tussenvoegsel: string;
   public achternaam: string;
@@ -37,7 +35,7 @@ export class LoginUserComponent implements OnInit {
  	}
 
   	onKey(event: any) {
-  		this.gebruikersnaam = event.target.value;
+  		this.emailadres = event.target.value;
   	}
 
   	onKeyww(event: any) {
@@ -49,7 +47,7 @@ export class LoginUserComponent implements OnInit {
                         this.id,
                         this.gebruikersnaam,
                         this.wachtwoord, 
-                        this.emailadress, 
+                        this.emailadres, 
                         this.voornaam, 
                         this.tussenvoegsel,
                         this.achternaam, 
@@ -62,22 +60,22 @@ export class LoginUserComponent implements OnInit {
                         this.linkedinadres,
                         this.githubadres
                         );
-  		console.log(this.gebruikersnaam);
+  		console.log(this.emailadres);
   		this.Inloggen(this.globalservice.gebruiker);
   	}
 
   	Inloggen(user){															//USERRRRRR
   		console.log(this.globalservice.gebruiker);
       console.log(user);
-  		this.loginservice.inlogMethodeUser(user).subscribe((response) => {
-			console.log(response);
-			var message = JSON.stringify(response);
-			console.log(message)
-			var cutstring = message.substring(12,19) 			// dit is zeker niet hoe het hoort, maar het werkt 
-			console.log(cutstring)
-			console.log(user);
+  		this.loginservice.inlogMethodeUser(user).subscribe((response : 
+        {message: string}) => {
+        console.log(response.message);
+			  if (response.message == "Success"){
 
-			if (cutstring == "Success"){
+          this.loginservice.getuserName(this.globalservice.gebruiker.emailadres).subscribe(
+            (user : User) => {
+              console.log(user)
+            });
 				this.router.navigate(['NAW'])
 			}
 			});
