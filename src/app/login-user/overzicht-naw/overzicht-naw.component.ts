@@ -3,11 +3,11 @@ import { GlobalService } from '../../global.service';
 
 
 @Component({
-  selector: 'app-dashboard-user',
-  templateUrl: './dashboard-user.component.html',
-  styleUrls: ['./dashboard-user.component.css']
+  selector: 'app-overzicht-naw',
+  templateUrl: './overzicht-naw.component.html',
+  styleUrls: ['./overzicht-naw.component.css']
 })
-export class DashboardUserComponent implements OnInit {
+export class OverzichtNAWComponent implements OnInit {
 
   constructor(private globalservice: GlobalService) { }
 
