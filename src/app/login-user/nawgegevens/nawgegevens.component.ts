@@ -92,7 +92,7 @@ export class NAWGegevensComponent implements OnInit {
  
       if (response == this.globalservice.gebruiker.id) {
         alert("Opgeslagen");
-        this.router.navigate(['Vraag']);
+        this.router.navigate(['OverzichtNAW']);
       } 
       
     });
