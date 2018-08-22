@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { User } from './user';
+import { Admin } from './admin';
 
 
 @Injectable({
@@ -10,5 +11,6 @@ export class GlobalService {
   constructor() { }
   public gebruiker: User;
   
+  public admin: Admin;
 }
 	
