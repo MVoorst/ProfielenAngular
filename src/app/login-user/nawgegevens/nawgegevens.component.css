@@ -11,6 +11,35 @@
 
 }
 
+.container  input[type="text"], input[type="password"], input[type="date"]{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 30px;
+    width: 50%;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+.form {
+    width: 100%;
+}
+
+.form input {
+    width: 50%;
+    margin-left: 220px;
+}
+
+
+.form label {
+    position: absolute;
+    font-size: 20px;
+    color: #fff;
+}
+
 h1 {
 	font-size: 50px;
 	color: #fff;
@@ -21,7 +50,7 @@ h1 {
 
 }
 
-.button {
+button {
     border: none;
     outline: none;
     height: 40px;
@@ -31,4 +60,9 @@ h1 {
     font-size: 18px;
     margin-top: 20px;
 
+}
+
+p {
+    font-size: 25px;
+    color: #fff;
 }

@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {Admin} from "./admin";
-import {LoginService} from './login.service';
-import {HttpClient} from '@angular/common/http';
+import { Admin} from "../admin";
+import { LoginService} from './login.service';
+import { HttpClient} from '@angular/common/http';
 import { RouterModule, Router} from '@angular/router';
+import { GlobalService } from '../global.service';
 
 @Component({
   selector: 'app-login-admin',
@@ -11,12 +12,12 @@ import { RouterModule, Router} from '@angular/router';
 })
 
 export class LoginAdminComponent implements OnInit {
-	
+	public id: number;
+  public naamMaster: string;
+  public gebruikersnaam: string;
+  public wachtwoord: string;
 
-	public gebruikersnaam: string = ''
-	public wachtwoord: string;
-
-	constructor(private httpclient: HttpClient, private loginservice: LoginService, private router: Router){}
+	constructor(private httpclient: HttpClient, private loginservice: LoginService, private router: Router, private globalservice: GlobalService){}
 
   	ngOnInit() {
  	}
@@ -31,25 +32,27 @@ export class LoginAdminComponent implements OnInit {
   	}
 
   	onClick(event: any){
-  		this.admin = new Admin(this.gebruikersnaam,this.wachtwoord);
-  		console.log(this.admin);
-  		this.Inloggen(this.admin);
+  		this.globalservice.admin = new Admin(this.id, this.naamMaster, this.gebruikersnaam,this.wachtwoord);
+  		console.log(this.globalservice.admin);
+  		this.Inloggen(this.globalservice.admin);
   	}
 
   	Inloggen(admin){
-  			console.log(admin);
-  			this.loginservice.inlogMethodeAdmin(admin).subscribe((response) => {
-			console.log(response);
-			var message = JSON.stringify(response);
-			console.log(message)
-			var cutstring = message.substring(12,19) 			// dit is zeker niet hoe het hoort, maar het werkt 
-			console.log(cutstring)
-			console.log(admin);
-
-			if (cutstring == "Success"){
-				this.router.navigate(['DashAdmin'])
-			}
-			});
-			
-  	};
+  		console.log(admin);
+  		this.loginservice.inlogMethodeAdmin(admin).subscribe((response :
+        {message : string}) => {
+			  console.log(response.message);
+        if (response.message == "Success"){
+          console.log(this.globalservice.admin.gebruikersnaam);
+          this.loginservice.getAdmin(this.globalservice.admin.gebruikersnaam).subscribe(
+          (admin : Admin) => {
+            console.log(admin)
+            this.globalservice.admin.id = admin.id;
+            console.log(this.globalservice.admin.id);
+          });
+          this.router.navigate(['DashAdmin'])
+      }
+      });
+      
+    };
 }

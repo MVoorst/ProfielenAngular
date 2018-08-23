@@ -21,8 +21,8 @@ export class LoginUserComponent implements OnInit {
   public tussenvoegsel: string;
   public achternaam: string;
   public geslacht: boolean;
-  public geboortedatum: string;
-  public huisnummer: string;
+  public geboortedatum: number;
+  public huisnummer: number;
   public straat: string;
   public postcode: string;
   public woonplaats: string;
@@ -74,7 +74,22 @@ export class LoginUserComponent implements OnInit {
 
           this.loginservice.getuserName(this.globalservice.gebruiker.emailadres).subscribe(
             (user : User) => {
+
               console.log(user)
+              this.globalservice.gebruiker.id = user.id;
+              this.globalservice.gebruiker.voornaam = user.voornaam;
+              this.globalservice.gebruiker.tussenvoegsel = user.tussenvoegsel;
+              this.globalservice.gebruiker.achternaam = user.achternaam;
+              this.globalservice.gebruiker.geslacht = user.geslacht;
+              this.globalservice.gebruiker.geboortedatum = user.geboortedatum;
+              this.globalservice.gebruiker.huisnummer= user.huisnummer;
+              this.globalservice.gebruiker.straat = user.straat;
+              this.globalservice.gebruiker.postcode = user.postcode;
+              this.globalservice.gebruiker.woonplaats = user.woonplaats;
+              this.globalservice.gebruiker.linkedinadres = user.linkedinadres;
+              this.globalservice.gebruiker.githubadres = user.githubadres;
+
+              console.log(this.globalservice.gebruiker.id);
             });
 				this.router.navigate(['NAW'])
 			}

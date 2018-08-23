@@ -14,6 +14,7 @@ export class LoginService {
 	private userAccountLoginUrl: string = "http://localhost:8082/api/useraccount/Login";
 	private userAccountallUrl: string= "http://localhost:8082/api/useraccount";
 	private userAccountNameUrl: string = "http://localhost:8082/api/useraccount/email="
+    private adminAccountNameUrl: string = "http://localhost:8082/api/adminaccount/gebruikersnaam="
 
 
 
@@ -44,4 +45,10 @@ export class LoginService {
         console.log(url);
     	return this.httpClient.get(url,this.httpOptions);
 	}
+
+    getAdmin(gebruikersnaam : string) : Observable <{}> {
+        const url= `${this.adminAccountNameUrl}${gebruikersnaam}`;
+        console.log(url);
+        return this.httpClient.get(url,this.httpOptions);
+    }
 }
