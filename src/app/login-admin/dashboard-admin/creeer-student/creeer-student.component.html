@@ -1,7 +1,17 @@
 <div class="container">
 	
-	<h1>Maak een nieuwe student aan</h1>
-	<div><p><button type="submit" class="button" (click)="onClick($event)"> Nieuwe student</button></p></div>
+	<h1>Nieuwe deelnemer</h1>
+		<p>Maak hier een nieuwe deelnemer aan.</p>
+		<form #NAWForm="ngForm">
+			<div class="form">
+				<label for="username">Gebruikersnaam </label>
+				<input type="text" class="form-control" id="username" required   name="username" (keyup) = "onKey($event)"><br>
+				<label for="email">Emailadres </label>
+				<input type="text" class="form-control" id="email" required  name="email" (keyup) = "onKeyemail($event)">
+				<br><button type="submit" class="button" (click)="onClick($event)"> Opslaan </button>
+		</div>
+	</form>
+
 
 <div class = "avatar">
 </div>

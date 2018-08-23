@@ -6,7 +6,7 @@ import {HttpHeaders} from '@angular/common/http';
   providedIn: 'root'
 })
 export class CreeerStudentService {
-		private url: string = "http://localhost:8082/api/adminaccount/Creeerstudent";
+		private creeerStudentUrl: string = "http://localhost:8082/api/useraccount";
 
 httpOptions = {
 		headers: new HttpHeaders({
@@ -14,10 +14,18 @@ httpOptions = {
 		})
 	};
 
-  constructor() { }
-}
 
 
-export class DashboardAdminService {
+	constructor(private httpClient: HttpClient) { }
+
+	maakDeelnemerAan(user) {
+		//var gebruiker = {gebruikersnaam: user.gebruikersnaam, emailadress: user.emailadress};
+		//console.log(gebruiker);
+		console.log(user.emailadres);
+		console.log('In methode maakDeelnemerAan');
+		return this.httpClient.post(this.creeerStudentUrl, user, this.httpOptions);
+		console.log(user);
+		
+	}
 
 }
