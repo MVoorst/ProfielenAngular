@@ -12,6 +12,7 @@ import { CreeerStudentService } from './creeer-student.service'
 })
 export class CreeerStudentComponent implements OnInit {
 
+	public id: number;
 	public gebruikersnaam: string = ''
 	public emailadres: string;
 	gebruiker : User;
@@ -34,13 +35,13 @@ admin: object;
   	onClick(event: any){
 		this.gebruiker = new User();
 		this.gebruiker.gebruikersnaam = this.gebruikersnaam;
-		this.gebruiker.emailadress = this.emailadres;
-		console.log(this.gebruiker.emailadress);
+		this.gebruiker.emailadres = this.emailadres;
+		console.log(this.gebruiker.emailadres);
 		this.Aanmaken(this.gebruiker);
 		}
 
 		Aanmaken (user) {
-			console.log(this.gebruiker.emailadress);
+			console.log(this.gebruiker.emailadres);
 			this.creeerstudentservice.maakDeelnemerAan(user).subscribe((response) => {
    			console.log(response);
    			}

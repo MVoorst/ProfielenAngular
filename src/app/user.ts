@@ -1,10 +1,10 @@
 export class User {
 	constructor(
-<<<<<<< HEAD
+
 		public id? : number,
 		public gebruikersnaam? : string,
 		public wachtwoord? : string,
-		public emailadress? : string,
+		public emailadres? : string,
 		public voornaam? : string,
 		public tussenvoegsel? : string,
 		public achternaam? : string,
@@ -16,23 +16,6 @@ export class User {
 		public woonplaats?: string,
 		public linkedinadres?: string,
 		public githubadres?: string
-=======
-		public id: number,
-		public gebruikersnaam: string,
-		public wachtwoord: string,
-		public emailadres: string,
-		public voornaam: string,
-		public tussenvoegsel: string,
-		public achternaam: string,
-		public geslacht: boolean,
-		public geboortedatum: string,
-		public huisnummer: string,
-		public straat: string,
-		public postcode: string,
-		public woonplaats: string,
-		public linkedinadres: string,
-		public githubadres: string
->>>>>>> master
 
 		) {
 		if (id!=null) {
@@ -41,8 +24,8 @@ export class User {
 		if (gebruikersnaam!=null) {
 			this.gebruikersnaam = gebruikersnaam;
 			}
-		if (emailadress!=null) {
-			this.emailadress = emailadress;
+		if (emailadres!=null) {
+			this.emailadres = emailadres;
 			}
 		if (voornaam!=null) {
 			this.voornaam = voornaam;

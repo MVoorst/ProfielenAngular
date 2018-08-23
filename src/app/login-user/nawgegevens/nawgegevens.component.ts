@@ -57,11 +57,3 @@ export class NAWGegevensComponent implements OnInit {
   }
 
 }
-<<<<<<< HEAD
-=======
-   	
-    
-
-
-
->>>>>>> master
