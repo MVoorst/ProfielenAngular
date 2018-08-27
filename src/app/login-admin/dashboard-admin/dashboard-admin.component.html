@@ -1,18 +1,11 @@
-<div>
-	<h1> Dit is voor het dashboard! </h1>
-
-	<h2> Maak user aan </h2>
-	<form>
-		<input type="text" class="form-control" id="newUser" required (keyup) = "onKeyUsername($event)" placeholder="Naam">
-		<br><input type="text" class="form-control" id="newEmail" required (keyup) = "onKeyEmail($event)" placeholder="Email">
-		<br><button type="text" (click)="NewUser()">Nieuwe gebruiker</button>
-	</form>
-
+<h3>Top Users</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let user of users" class="col-1-4"
+      routerLink="/detail/{{user.id}}">
+    <div class="module user">
+      <h4>{{user.gebruikersnaam}}</h4>
+    </div>
+  </a>
 </div>
 
-
-
-
-
-
-
+<!--<app-user-search></app-user-search>-->

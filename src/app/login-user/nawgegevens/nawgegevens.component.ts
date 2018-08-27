@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User} from "../user";
+import { User} from '../../user';
 import { HttpClient} from '@angular/common/http';
 import { RouterModule, Router} from '@angular/router';
 import { NawgegevensService } from './nawgegevens.service';
@@ -50,16 +50,22 @@ export class NAWGegevensComponent implements OnInit {
     this.Opslaan(this.globalservice.gebruiker)
    }
 
+   Opslaan(newNAW){
+    console.log("In Opslaan");
+    console.log(newNAW);
+    this.nawgegevensservice.OpslaanNAW(newNAW).subscribe(
+        (response) => {
+        console.log(response);
+ 
+          }
+        
+          //this.router.navigate(['Vraag'])	
 
-   	Opslaan(newNAW){
-      console.log("In Opslaan");
-      console.log(newNAW);
-   	  this.nawgegevensservice.OpslaanNAW(newNAW).subscribe((response) => {
-   		console.log(response);
+        )
 
-   		//this.router.navigate(['Vraag'])	
- 		}
-  }
+    }
+
+  
 }
 
 

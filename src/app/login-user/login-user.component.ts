@@ -34,7 +34,7 @@ export class LoginUserComponent implements OnInit {
 	constructor(private httpclient: HttpClient, private loginservice: LoginService, private router: Router, private globalservice: GlobalService){}
 
   	ngOnInit() {
- 	}
+   }
 
   	onKey(event: any) {
   		this.gebruikersnaam = event.target.value;

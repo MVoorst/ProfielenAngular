@@ -11,7 +11,12 @@ import { DashboardUserComponent } from './login-user/dashboard-user/dashboard-us
 import { NAWGegevensComponent } from './login-user/nawgegevens/nawgegevens.component';
 import { OpeningPageComponent} from './opening-page/opening-page.component';
 import { VraagComponent } from './vraag/vraag.component';
-import { CreeerStudentComponent } from './login-admin/dashboard-admin/creeer-student/creeer-student.component'
+import { CreeerStudentComponent } from './login-admin/dashboard-admin/creeer-student/creeer-student.component';
+import { UsersComponent } from './users/users.component';
+import { UserDetailComponent } from './user-detail/user-detail.component';
+import { MessagesComponent } from './messages/messages.component';
+import { VragenComponent } from './vragen/vragen.component';
+import { VraagDetailComponent } from './vraag-detail/vraag-detail.component'
 
 
 const appRoutes: Routes = [
@@ -21,7 +26,12 @@ const appRoutes: Routes = [
   {path: 'UserLogin', component: LoginUserComponent},
   {path: 'DashAdmin', component : DashboardAdminComponent},
   {path: 'NAW', component: NAWGegevensComponent},
-  {path: 'Vraag', component: VraagComponent}
+  {path: 'Vraag', component: VraagComponent},
+  {path: '', redirectTo: '/dashboard', pathMatch: 'full'},
+  {path: 'dashboard', component: DashboardAdminComponent},
+  {path: 'detail/:id', component: UserDetailComponent},
+  {path: 'users', component: UsersComponent},
+  {path: 'vragen', component: VragenComponent}
   
 ]
 
@@ -37,14 +47,18 @@ const appRoutes: Routes = [
     OpeningPageComponent,
     VraagComponent,
     CreeerStudentComponent,
+    UsersComponent,
+    UserDetailComponent,
+    MessagesComponent,
+    VragenComponent,
+    VraagDetailComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot(
-      appRoutes,
-      )
+      appRoutes,)
   ],
   providers: [],
   bootstrap: [AppComponent]

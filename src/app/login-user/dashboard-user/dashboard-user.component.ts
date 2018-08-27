@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Vraag } from '/Users/oucer/Desktop/Profielenangular/ProfielenAngular/src/app/vraag';
+import { VraagService } from '/Users/oucer/Desktop/Profielenangular/ProfielenAngular/src/app/vraag.service';
 
 @Component({
   selector: 'app-dashboard-user',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardUserComponent implements OnInit {
 
-  constructor() { }
+  vragen: Vraag[] = [];
+
+  constructor(private vraagService: VraagService) { }
 
   ngOnInit() {
   }
 
+  getVragen(): void {
+    this.vraagService.getVragen()
+      .subscribe(vragen => this.vragen = vragen.slice(1, 5));
+  }
 }
