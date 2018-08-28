@@ -36,9 +36,6 @@ export class NAWGegevensComponent implements OnInit {
   ngOnInit() {
   }
 
-
-  	 user: object;
-
   onKeyVoornaam(event: any) {
   	this.globalservice.gebruiker.voornaam = event.target.value;
   }

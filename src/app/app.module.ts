@@ -29,7 +29,6 @@ const appRoutes: Routes = [
   {path: 'CreeerStudent', component: CreeerStudentComponent},
   {path: 'OverzichtNAW', component: OverzichtNAWComponent},
   {path: 'Vragenlijst', component: VragenlijstComponent}
-  
 ]
 
 
