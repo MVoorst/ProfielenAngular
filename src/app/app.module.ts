@@ -12,7 +12,9 @@ import { NAWGegevensComponent } from './login-user/nawgegevens/nawgegevens.compo
 import { OpeningPageComponent} from './opening-page/opening-page.component';
 import { VraagComponent } from './vraag/vraag.component';
 import { CreeerStudentComponent } from './login-admin/dashboard-admin/creeer-student/creeer-student.component';
-import { OverzichtNAWComponent } from './login-user/overzicht-naw/overzicht-naw.component'
+import { OverzichtNAWComponent } from './login-user/overzicht-naw/overzicht-naw.component';
+import { VragenlijstComponent } from './login-admin/dashboard-admin/vragenlijst/vragenlijst.component';
+import { StudentenoverzichtComponent } from './login-admin/dashboard-admin/studentenoverzicht/studentenoverzicht.component'
 
 
 const appRoutes: Routes = [
@@ -25,8 +27,8 @@ const appRoutes: Routes = [
   {path: 'NAW', component: NAWGegevensComponent},
   {path: 'Vraag', component: VraagComponent},
   {path: 'CreeerStudent', component: CreeerStudentComponent},
-  {path: 'OverzichtNAW', component: OverzichtNAWComponent}
-  
+  {path: 'OverzichtNAW', component: OverzichtNAWComponent},
+  {path: 'Vragenlijst', component: VragenlijstComponent}
 ]
 
 
@@ -42,6 +44,8 @@ const appRoutes: Routes = [
     VraagComponent,
     CreeerStudentComponent,
     OverzichtNAWComponent,
+    VragenlijstComponent,
+    StudentenoverzichtComponent,
   ],
   imports: [
     BrowserModule,

@@ -60,7 +60,6 @@ export class NAWGegevensComponent implements OnInit {
     this.globalservice.gebruiker.huisnummer = event.target.value;
   }
 
-
   onKeyStraat(event : any){
     this.globalservice.gebruiker.straat = event.target.value;
   }
@@ -98,6 +97,4 @@ export class NAWGegevensComponent implements OnInit {
       
     });
   }
-
-
 }
