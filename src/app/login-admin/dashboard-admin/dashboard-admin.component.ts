@@ -48,11 +48,7 @@ export class DashboardAdminComponent implements OnInit {
 
  		}
 
-  
-
- 			}
-
-    onClickVragenlijst(event: any){
+     onClickVragenlijst(event: any){
       this.router.navigate(['Vragenlijst'])  
        }
 

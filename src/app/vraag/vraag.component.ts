@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 import { RouterModule, Router} from '@angular/router';
 import {VraagService} from "./vraag.service";
 
@@ -14,7 +14,7 @@ export class VraagComponent implements OnInit {
   public antwoorddeelnemer : string;
 
 
-  constructor(private vraagservice: VraagService) { }
+  constructor(private vraagservice: VraagService, private router: Router) { }
 
   ngOnInit() {
   }
@@ -26,6 +26,22 @@ export class VraagComponent implements OnInit {
   		}
 
   	onClick(event: any){
+      this.Antwoorden(this.antwoorddeelnemer);
   	}
 
+    Antwoorden(antwoord: string) {
+      this.vraagservice.AntwoordenPost(antwoord).subscribe(
+          (error: HttpErrorResponse) => {
+          alert("Gepost");
+          //console.log(error.status);
+          if (error.status == 500){
+            console.log("gelukt met antwoorden");
+            //this.router.navigate(['NAW']);
+          } else {
+            console.log("niet gelukt");
+          }
+        })
+          
+      };
+    
 }

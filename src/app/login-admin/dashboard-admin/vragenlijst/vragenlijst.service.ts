@@ -22,8 +22,8 @@ export class VragenlijstService {
 
 
   	VraagOpslaan(id: number, vraag: string) : Observable <{}> {
-  		const url = '${this.vraagopslaanurl}${1}${vraag}';
-  //	console.log(this.url);
-  		return this.httpClient.post(this.vraagopslaanurl, vraag, this.httpOptions);
+  		const url = `${this.vraagopslaanurl}${1}/${vraag}`;
+      console.log(url);
+  		return this.httpClient.post(url, vraag, this.httpOptions);
   	}
 }

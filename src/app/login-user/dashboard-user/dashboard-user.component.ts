@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Vraag } from '/Users/oucer/Desktop/Profielenangular/ProfielenAngular/src/app/vraag';
-import { VraagService } from '/Users/oucer/Desktop/Profielenangular/ProfielenAngular/src/app/vraag.service';
+import { Vraag } from '../../vraag';
+import { VraagService } from '../../vraag.service';
 import { GlobalService } from '../../global.service';
 
 @Component({
