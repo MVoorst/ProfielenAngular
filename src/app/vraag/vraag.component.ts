@@ -10,7 +10,8 @@ import {VraagService} from "./vraag.service";
 })
 export class VraagComponent implements OnInit {
 
-	public antwoord : string = '';
+	public vraagcontent : string;
+  public antwoorddeelnemer : string;
 
 
   constructor(private vraagservice: VraagService) { }
@@ -21,7 +22,7 @@ export class VraagComponent implements OnInit {
  user: object;
 
   	onKey(event: any) {
-  	this.antwoord = event.target.value;
+  	this.antwoorddeelnemer = event.target.value;
   		}
 
   	onClick(event: any){
