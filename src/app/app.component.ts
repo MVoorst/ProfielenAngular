@@ -7,6 +7,5 @@ import { User } from './user';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ProfielenApp';
-  LoggedUser: User;
+
 }

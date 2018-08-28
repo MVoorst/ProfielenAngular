@@ -3,9 +3,6 @@ import {HttpClient} from '@angular/common/http';
 import {HttpHeaders} from '@angular/common/http';
 import {Observable, of} from 'rxjs';
 
-
-
-
 @Injectable({
   providedIn: 'root'
 })
@@ -15,8 +12,6 @@ export class LoginService {
 	private userAccountallUrl: string= "http://localhost:8082/api/useraccount";
 	private userAccountNameUrl: string = "http://localhost:8082/api/useraccount/email="
     private adminAccountNameUrl: string = "http://localhost:8082/api/adminaccount/gebruikersnaam="
-
-
 
 	httpOptions = {
 		headers: new HttpHeaders({

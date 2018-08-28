@@ -1,0 +1,15 @@
+<h2>Mijn Vragen</h2>
+<nav>
+    <a routerLink= "/dashboard">Overzicht</a>
+    <a routerLink= "/gegevens">Gegevens</a>
+    <a routerLink= "/vraag1">Vraag 1</a>
+    <a routerLink= "/vraag2">Vraag 2</a>
+    <a routerLink= "/vraag3">Vraag 3</a>
+</nav>
+<ul class="vragen">
+  <li *ngFor="let vraag of vragen">
+    <a routerLink="/detail/{{vraag.id}}">
+      <span class="badge">{{vraag.id}}</span> {{vraag.contentvraag}}
+    </a>
+  </li>
+</ul>
