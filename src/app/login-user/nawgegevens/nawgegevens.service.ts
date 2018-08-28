@@ -5,6 +5,7 @@ import {HttpHeaders} from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
+
 export class NawgegevensService {
 	private usernawUrl: string = "http://localhost:8082/api/useraccount/naw"
 

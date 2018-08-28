@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Vraag } from '/Users/oucer/Desktop/Profielenangular/ProfielenAngular/src/app/vraag';
 import { VraagService } from '/Users/oucer/Desktop/Profielenangular/ProfielenAngular/src/app/vraag.service';
+import { GlobalService } from '../../global.service';
 
 @Component({
   selector: 'app-dashboard-user',
@@ -8,11 +9,10 @@ import { VraagService } from '/Users/oucer/Desktop/Profielenangular/ProfielenAng
   styleUrls: ['./dashboard-user.component.css']
 })
 export class DashboardUserComponent implements OnInit {
-
   vragen: Vraag[] = [];
 
-  constructor(private vraagService: VraagService) { }
-
+  constructor(private vraagService: VraagService, private globalservice: GlobalService) { }
+ 
   ngOnInit() {
   }
 

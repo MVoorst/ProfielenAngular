@@ -13,18 +13,16 @@ import { User } from '../user';
 })
 
 export class LoginUserComponent implements OnInit {
-	user: Object;
-
-  public id: number = 0;
+  public id: number;
 	public gebruikersnaam: string;
 	public wachtwoord: string;
-  public emailadress: string;
+  public emailadres: string;
   public voornaam: string;
   public tussenvoegsel: string;
   public achternaam: string;
   public geslacht: boolean;
-  public geboortedatum: string;
-  public huisnummer: string;
+  public geboortedatum: number;
+  public huisnummer: number;
   public straat: string;
   public postcode: string;
   public woonplaats: string;
@@ -37,7 +35,7 @@ export class LoginUserComponent implements OnInit {
    }
 
   	onKey(event: any) {
-  		this.gebruikersnaam = event.target.value;
+  		this.emailadres = event.target.value;
   	}
 
   	onKeyww(event: any) {
@@ -49,7 +47,7 @@ export class LoginUserComponent implements OnInit {
                         this.id,
                         this.gebruikersnaam,
                         this.wachtwoord, 
-                        this.emailadress, 
+                        this.emailadres, 
                         this.voornaam, 
                         this.tussenvoegsel,
                         this.achternaam, 
@@ -62,22 +60,37 @@ export class LoginUserComponent implements OnInit {
                         this.linkedinadres,
                         this.githubadres
                         );
-  		console.log(this.gebruikersnaam);
+  		console.log(this.emailadres);
   		this.Inloggen(this.globalservice.gebruiker);
   	}
 
   	Inloggen(user){															//USERRRRRR
   		console.log(this.globalservice.gebruiker);
       console.log(user);
-  		this.loginservice.inlogMethodeUser(user).subscribe((response) => {
-			console.log(response);
-			var message = JSON.stringify(response);
-			console.log(message)
-			var cutstring = message.substring(12,19) 			// dit is zeker niet hoe het hoort, maar het werkt 
-			console.log(cutstring)
-			console.log(user);
+  		this.loginservice.inlogMethodeUser(user).subscribe(
+        (response : {message: string}) => {
+          console.log(response.message);
+			    if (response.message == "Success"){
 
-			if (cutstring == "Success"){
+          this.loginservice.getuserName(this.globalservice.gebruiker.emailadres).subscribe(
+            (user : User) => {
+
+              console.log(user)
+              this.globalservice.gebruiker.id = user.id;
+              this.globalservice.gebruiker.voornaam = user.voornaam;
+              this.globalservice.gebruiker.tussenvoegsel = user.tussenvoegsel;
+              this.globalservice.gebruiker.achternaam = user.achternaam;
+              this.globalservice.gebruiker.geslacht = user.geslacht;
+              this.globalservice.gebruiker.geboortedatum = user.geboortedatum;
+              this.globalservice.gebruiker.huisnummer= user.huisnummer;
+              this.globalservice.gebruiker.straat = user.straat;
+              this.globalservice.gebruiker.postcode = user.postcode;
+              this.globalservice.gebruiker.woonplaats = user.woonplaats;
+              this.globalservice.gebruiker.linkedinadres = user.linkedinadres;
+              this.globalservice.gebruiker.githubadres = user.githubadres;
+
+              console.log(this.globalservice.gebruiker.id);
+            });
 				this.router.navigate(['NAW'])
 			}
 			});

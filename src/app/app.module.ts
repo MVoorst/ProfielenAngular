@@ -17,13 +17,14 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { VragenComponent } from './vragen/vragen.component';
 import { VraagDetailComponent } from './vraag-detail/vraag-detail.component'
-
+import { OverzichtNAWComponent } from './login-user/overzicht-naw/overzicht-naw.component'
 
 const appRoutes: Routes = [
   {path: '', redirectTo: '/Welkom', pathMatch: 'full' },
   {path: 'Welkom', component: OpeningPageComponent},
   {path: 'AdminLogin', component: LoginAdminComponent},
   {path: 'UserLogin', component: LoginUserComponent},
+  {path: 'DashUser', component: DashboardUserComponent},
   {path: 'DashAdmin', component : DashboardAdminComponent},
   {path: 'NAW', component: NAWGegevensComponent},
   {path: 'Vraag', component: VraagComponent},
@@ -31,11 +32,10 @@ const appRoutes: Routes = [
   {path: 'dashboard', component: DashboardAdminComponent},
   {path: 'detail/:id', component: UserDetailComponent},
   {path: 'users', component: UsersComponent},
-  {path: 'vragen', component: VragenComponent}
-  
+  {path: 'vragen', component: VragenComponent},
+  {path: 'CreeerStudent', component: CreeerStudentComponent},
+  {path: 'OverzichtNAW', component: OverzichtNAWComponent}  
 ]
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,6 +52,7 @@ const appRoutes: Routes = [
     MessagesComponent,
     VragenComponent,
     VraagDetailComponent,
+    OverzichtNAWComponent,
   ],
   imports: [
     BrowserModule,

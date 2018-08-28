@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+
 import { User } from 'src/app/user';
 import { UserService } from 'src/app/user.service';
 
+import {HttpClient} from '@angular/common/http';
+import { RouterModule, Router} from '@angular/router';
 
 @Component({
   selector: 'app-dashboard-admin',
@@ -15,7 +18,7 @@ export class DashboardAdminComponent implements OnInit {
 	user: object;
 
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit() {
     this.getUsers();
@@ -39,4 +42,10 @@ export class DashboardAdminComponent implements OnInit {
 
 
   }
-}
+
+  	onClick(event: any){
+  		this.router.navigate(['CreeerStudent'])	
+ 		}
+};
+  
+

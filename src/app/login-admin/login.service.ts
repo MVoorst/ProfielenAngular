@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {HttpHeaders} from '@angular/common/http';
-
-
-
+import {Observable, of} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,8 +9,9 @@ import {HttpHeaders} from '@angular/common/http';
 export class LoginService {
 	private adminAccountLoginUrl: string = "http://localhost:8082/api/adminaccount/Login";
 	private userAccountLoginUrl: string = "http://localhost:8082/api/useraccount/Login";
-
-
+	private userAccountallUrl: string= "http://localhost:8082/api/useraccount";
+	private userAccountNameUrl: string = "http://localhost:8082/api/useraccount/email="
+    private adminAccountNameUrl: string = "http://localhost:8082/api/adminaccount/gebruikersnaam="
 
 	httpOptions = {
 		headers: new HttpHeaders({
@@ -31,4 +30,20 @@ export class LoginService {
 	inlogMethodeUser (user) {
 		return this.httpClient.post(this.userAccountLoginUrl, user, this.httpOptions);
 	}
+
+	getallUsers() {
+		return this.httpClient.get(this.userAccountallUrl,this.httpOptions);
+	}
+
+	getuserName(emailadres: string) : Observable <{}> {
+	    const url= `${this.userAccountNameUrl}${emailadres}`;
+        console.log(url);
+    	return this.httpClient.get(url,this.httpOptions);
+	}
+
+    getAdmin(gebruikersnaam : string) : Observable <{}> {
+        const url= `${this.adminAccountNameUrl}${gebruikersnaam}`;
+        console.log(url);
+        return this.httpClient.get(url,this.httpOptions);
+    }
 }

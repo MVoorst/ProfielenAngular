@@ -1,31 +1,30 @@
-export class User {
-	constructor(
-
-		public id? : number,
-		public gebruikersnaam? : string,
-		public wachtwoord? : string,
-		public emailadres? : string,
-		public voornaam? : string,
-		public tussenvoegsel? : string,
-		public achternaam? : string,
-		public geslacht?: boolean,
-		public geboortedatum?: number,
-		public huisnummer?: number,
-		public straat?: string,
-		public postcode?: string,
-		public woonplaats?: string,
-		public linkedinadres?: string,
-		public githubadres?: string
-
-		) {
-		if (id!=null) {
+export class Gegevens {
+    constructor (
+        
+        public id? : number,
+        public gebruikersnaam?: string,
+        public wachtwoord?: string,
+        public emailadress?: string,
+        public voornaam?: string,
+        public tussenvoegsel?: string,
+        public achternaam?: string,
+        public geslacht?: boolean,
+        public geboortedatum?: number,
+        public huisnummer?: number,
+        public straat?: string,
+        public postcode?: string,
+        public woonplaats?: string,
+        public linkedinadres?: string,
+        public githubadres?: string
+    ) {
+        if (id!=null) {
 			this.id = id;
 			}
 		if (gebruikersnaam!=null) {
 			this.gebruikersnaam = gebruikersnaam;
 			}
-		if (emailadres!=null) {
-			this.emailadres = emailadres;
+		if (emailadress!=null) {
+			this.emailadress = emailadress;
 			}
 		if (voornaam!=null) {
 			this.voornaam = voornaam;
@@ -57,5 +56,5 @@ export class User {
 		if (githubadres!=null) {
 			this.githubadres = githubadres;
 			}
-		}
-	}
+    }
+}

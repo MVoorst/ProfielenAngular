@@ -1,11 +1,51 @@
+
 <div class="container">
+	<nav>
+		<a routerLink= "/dashboard">Overzicht</a>
+		<a routerLink= "/gegevens">Gegevens</a>
+		<a routerLink= "/vraag1">Vraag 1</a>
+		<a routerLink= "/vraag2">Vraag 2</a>
+		<a routerLink= "/vraag3">Vraag 3</a>
+	</nav>
 	
 	<h1> Gegevens deelnemer</h1>
 	<p>Vul hieronder zo volledig mogelijk je gegevens in.</p>
 	<form #NAWForm="ngForm">
 		<div class="form">
-			<label for="postcode">Postcode: </label>
-			<input type="text" class="form-control" id="postcode" required   name="postcode" (keyup) = "onKey($event)"><br>
+			<label for="voornaam">Voornaam </label>
+			<input type="text" class="form-control" id="voornaam" required   name="voornaam" (keyup) = "onKeyVoornaam($event)" placeholder="Voornaam"><br>
+
+			<label for="tussenvoegsel">Tussenvoegsel </label>
+			<input type="text" class="form-control" id="tussenvoegsel" required   name="tussenvoegsel" (keyup) = "onKeyTussenvoegsel($event)" placeholder="Tussenvoegsel"><br>
+
+			<label for="achternaam">Achternaam </label>
+			<input type="text" class="form-control" id="achternaam" required   name="achternaam" (keyup) = "onKeyAchternaam($event)" placeholder="Achternaam"><br>
+
+			<label for="geslacht">Geslacht </label>
+			<input type="text" class="form-control" id="geslacht" required   name="geslacht" (keyup) = "onKeyGeslacht($event)" placeholder="0 of 1"><br>
+
+			<label for="geboortedatum">Geboortedatum </label>
+			<input type="text" class="form-control" id="geboortedatum" required   name="geboortedatum" (input) = "onKeyGeboortedatum($event)" placeholder="Geboortedatum"><br>
+
+			<label for="huisnummer" >Huisnummer </label>
+			<input type="text" class="form-control" id="huisnummer" required   name="huisnummer" (keyup) = "onKeyHuisnummer($event)" placeholder="30"><br>
+
+
+			<label for="straat">Straat </label>
+			<input type="text" class="form-control" id="straat" required   name="straat" (keyup) = "onKeyStraat($event)" placeholder="Straatnaam"><br> 
+
+			<label for="postcode">Postcode </label>
+			<input type="text" class="form-control" id="postcode" required   name="postcode" (keyup) = "onKeyPostcode($event)" placeholder="1234AB"><br>
+
+			<label for="woonplaats">Woonplaats </label>
+			<input type="text" class="form-control" id="woonplaats" required   name="woonplaats" (keyup) = "onKeyWoonplaats($event)" placeholder="Voornaam"><br>
+
+			<label for="linkedinadres">LinkedIn Adres </label>
+			<input type="text" class="form-control" id="linkedinadres" required   name="linkedinadres" (keyup) = "onKeyLIadres($event)" placeholder="URL"><br>
+
+			<label for="githubadres">Github Adres </label>
+			<input type="text" class="form-control" id="githubadres" required   name="githubadres" (keyup) = "onKeyGHadres
+			($event)" placeholder="URL"><br>
 			<br><button type="submit" class="button" (click)="onClick($event)"> Opslaan</button>
 		</div>
 	</form>
