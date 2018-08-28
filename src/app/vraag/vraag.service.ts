@@ -14,5 +14,7 @@ export class VraagService {
 		})
 	};
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) { 
+  	
+  	}
 }

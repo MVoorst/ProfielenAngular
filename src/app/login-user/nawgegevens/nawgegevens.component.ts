@@ -36,9 +36,9 @@ export class NAWGegevensComponent implements OnInit {
   ngOnInit() {
   }
 
-<<<<<<< HEAD
+
   	 user: object;
-=======
+
   onKeyVoornaam(event: any) {
   	this.globalservice.gebruiker.voornaam = event.target.value;
   }
@@ -62,7 +62,6 @@ export class NAWGegevensComponent implements OnInit {
   onKeyHuisnummer(event : any) {
     this.globalservice.gebruiker.huisnummer = event.target.value;
   }
->>>>>>> master
 
   onKeyStraat(event : any){
     this.globalservice.gebruiker.straat = event.target.value;
@@ -101,14 +100,4 @@ export class NAWGegevensComponent implements OnInit {
       
     });
   }
-<<<<<<< HEAD
-
 }
-=======
-}
-   	
-    
-
-
-
->>>>>>> master
