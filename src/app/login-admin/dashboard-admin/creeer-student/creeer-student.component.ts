@@ -44,5 +44,6 @@ admin: object;
 			console.log(this.gebruiker.emailadres);
 			this.creeerstudentservice.maakDeelnemerAan(user).subscribe((response) => {
    			console.log(response);
-   			}
-   		}
+   			});
+     }
+}

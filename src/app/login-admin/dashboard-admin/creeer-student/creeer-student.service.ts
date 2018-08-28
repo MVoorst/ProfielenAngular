@@ -24,8 +24,6 @@ httpOptions = {
 		console.log(user.emailadres);
 		console.log('In methode maakDeelnemerAan');
 		return this.httpClient.post(this.creeerStudentUrl, user, this.httpOptions);
-		console.log(user);
-		
 	}
 
 }

@@ -24,11 +24,8 @@ const appRoutes: Routes = [
   {path: 'DashAdmin', component : DashboardAdminComponent},
   {path: 'NAW', component: NAWGegevensComponent},
   {path: 'Vraag', component: VraagComponent},
-<<<<<<< HEAD
-  {path: 'CreeerStudent', component: CreeerStudentComponent}
-=======
+  {path: 'CreeerStudent', component: CreeerStudentComponent},
   {path: 'OverzichtNAW', component: OverzichtNAWComponent}
->>>>>>> master
   
 ]
 
