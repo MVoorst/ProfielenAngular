@@ -16,35 +16,36 @@ export class CreeerStudentComponent implements OnInit {
 	public gebruikersnaam: string = ''
 	public emailadres: string;
 	gebruiker : User;
+  admin: object;
 
   constructor(private httpclient: HttpClient, private creeerstudentservice: CreeerStudentService, private router: Router) { }
 
   ngOnInit() {
   }
 
-admin: object;
-
+  
   	onKey(event: any) {
   		this.gebruikersnaam = event.target.value;
   	}
 
-  	onKeyemail(event: any) {
-  		this.emailadres = event.target.value;
-  	}
+  onKeyemail(event: any) {
+      this.emailadres = event.target.value;
+    }
 
-  	onClick(event: any){
-		this.gebruiker = new User();
-		this.gebruiker.gebruikersnaam = this.gebruikersnaam;
-		this.gebruiker.emailadres = this.emailadres;
-		console.log(this.gebruiker.emailadres);
-		this.Aanmaken(this.gebruiker);
-		}
+    onClick(event: any){
+    this.gebruiker = new User();
+    this.gebruiker.gebruikersnaam = this.gebruikersnaam;
+    this.gebruiker.emailadres = this.emailadres;
+    console.log(this.gebruiker.emailadres);
+    this.Aanmaken(this.gebruiker);
+    }
 
-		Aanmaken (user) {
-			console.log(this.gebruiker.emailadres);
-			this.creeerstudentservice.maakDeelnemerAan(user).subscribe(
-					(response) => {
-   						console.log(response);
-   					})
-		   }
-		}
+    Aanmaken (user) {
+      console.log(this.gebruiker.emailadres);
+      this.creeerstudentservice.maakDeelnemerAan(user).subscribe((response)=> {
+         console.log(response);
+         })
+       }
+
+  }
+
