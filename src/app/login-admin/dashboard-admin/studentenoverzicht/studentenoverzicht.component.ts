@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {StudentenoverzichtService} from './studentenoverzicht.service'
+
 
 @Component({
   selector: 'app-studentenoverzicht',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudentenoverzichtComponent implements OnInit {
 
-  constructor() { }
+  constructor(private studentenoverzichtService: StudentenoverzichtService) { }
+  private idVraag: number = 1;
 
   ngOnInit() {
   }
+  onClick(event: any){
+    this.Ophalen();
+  }
+
+  Ophalen() {
+   // this.studentenoverzichtService.getVraagUser(this.idVraag).subscribe(response) => {
+
+    }
+    
 
 }
