@@ -91,7 +91,7 @@ export class LoginUserComponent implements OnInit {
 
               console.log(this.globalservice.gebruiker.id);
             });
-				this.router.navigate(['NAW'])
+				this.router.navigate(['DashUser'])
 			}
 			});
 			

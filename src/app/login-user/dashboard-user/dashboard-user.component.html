@@ -6,16 +6,19 @@
       <h4>{{vraag.contentvraag}}</h4>
     </div>
   </a>
-<div>
-    <h1> Welkom  </h1>
 
-    <div class = "header">
-        <nav>
-            <a routerLink="/NAW" routerLinkActive="active">NAW gegevens</a>
-            <a routerLink="/Vraag" routerLinkActive="active">Vragen</a>
-        </nav>
-    </div>
+<div>
+    <h1> Welkom</h1>
 </div>
+
+<nav>
+        <a routerLink="/NAW">NAW gegevens</a>
+        <a routerLink="/OverzichtNAW">Overzicht gegevens</a>
+        <a routerLink="/Vraag">Vragen</a>
+        <a routerLink="/OverzichtVraag">Overzicht Vraag en Antwoord</a>
+</nav>
+  
+
 
 <div>
     <button (click)="onClick($event)">Ophalen vraag</button>
