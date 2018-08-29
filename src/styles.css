@@ -1,22 +1,138 @@
 /* Application-wide Styles */
-h1 {
-	color: #369;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 250%;
-  }
-  h2, h3 {
-	color: #444;
-	font-family: Arial, Helvetica, sans-serif;
-	font-weight: lighter;
-  }
-  body {
+h2, h3 {
+color: #444;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: lighter;
+    text-align: center;
+}
+
+body {
 	margin: 2em;
-  }
-  body, input[text], button {
-	color: #888;
+    background: url(assets/Images/achievement-agreement-arms-1068523.png);
+}
+
+body, input[text], button {
+  color: #888;
 	font-family: Cambria, Georgia;
-  }
-  /* everywhere else */
-  * {
+}
+
+.container {
+	width: 60%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 5% 70px;
+    background: rgba(111, 86, 122, 0.9)
+        
+}
+
+.globalbutton {
+    opacity: 1;
+    border: 1px solid #fff;
+    outline: none;
+    height: 50px;
+    width: 150px;
+    background: #fff;
+    color: #000;
+    font-size: 18px;
+    border-radius: 0px;
+    transition:opacity 0s;
+        align-self: center;
+        align-content: center;
+    align-items: center;
+}
+
+.globalbutton:hover {
+        opacity: 1;
+    cursor: pointer;
+    border: 1px solid #fff;
+    background: #4d004d;
+    color: #fff;
+    transition:opacity 0s;
+}
+globalbutton:active{opacity:0.5}
+globalbutton-ripple:active{opacity:0.5}
+globalbutton-ripple{transition:opacity 0s}
+
+
+
+
+h1 {
+	font-size: 50px;
+	color: #fff;
+	margin-bottom: 10px;
+	opacity: 1;
+	margin-top: 0px;
+	margin-bottom: 50px;
+    text-align: center;
+}
+
+
+.container	input[type="text"], input[type="password"], input[placeholder]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    width: 90%;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+
+}
+
+.button {
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 90%;
+    background: #fff;
+    color: #000;
+    font-size: 18px;
+    margin-top: 20px;
+
+
+}
+
+button: hover {
+    cursor: pointer;
+    background-color: #9d44fb;
+    color: #000;
+}
+
+
+
+label {
+	font-size: 20px;
+}
+
+/* everywhere else */
+* {
 	font-family: Arial, Helvetica, sans-serif;
+  }
+
+nav a {
+    padding: 5px 10px;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+    background-color: #eee;
+    border-radius: 4px;
+}
+
+nav a:visited, a:link {
+    color: #607d8b;
+}
+
+nav a:hover {
+    color: #039be5;
+    background-color: #cfd8dc;
+}
+
+nav a.active {
+    color: #039be5;
   }

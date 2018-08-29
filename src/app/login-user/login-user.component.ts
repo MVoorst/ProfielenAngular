@@ -4,6 +4,8 @@ import { RouterModule, Router} from '@angular/router';
 import { LoginService } from '../login-admin/login.service';
 import { GlobalService } from '../global.service';
 import { User } from '../user';
+import {Subject} from 'rxjs';
+import {debounceTime} from 'rxjs/operators';
 
 
 @Component({
@@ -92,8 +94,12 @@ export class LoginUserComponent implements OnInit {
               console.log(this.globalservice.gebruiker.id);
             });
 				this.router.navigate(['NAW'])
-			}
+			} 
+
 			});
 			
   	};
+
+    
+    
 }

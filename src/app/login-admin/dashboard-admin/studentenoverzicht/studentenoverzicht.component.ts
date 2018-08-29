@@ -10,18 +10,9 @@ import {StudentenoverzichtService} from './studentenoverzicht.service'
 export class StudentenoverzichtComponent implements OnInit {
 
   constructor(private studentenoverzichtService: StudentenoverzichtService) { }
-  private idVraag: number = 1;
+  
 
   ngOnInit() {
   }
-  onClick(event: any){
-    this.Ophalen();
-  }
-
-  Ophalen() {
-   // this.studentenoverzichtService.getVraagUser(this.idVraag).subscribe(response) => {
-
-    }
-    
-
+  
 }
