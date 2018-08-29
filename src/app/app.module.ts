@@ -23,7 +23,7 @@ import { StudentenoverzichtComponent } from './login-admin/dashboard-admin/stude
 
 
 const appRoutes: Routes = [
-  {path: '', redirectTo: '/dashboard', pathMatch: 'full'},
+  {path: '', redirectTo: '/Welkom', pathMatch: 'full'},
   {path: 'Welkom', component: OpeningPageComponent},
   {path: 'AdminLogin', component: LoginAdminComponent},
   {path: 'UserLogin', component: LoginUserComponent},

@@ -1,8 +1,10 @@
 <nav > 
 	<a routerLink= "/dashboard">Overzicht</a>
 	<a routerLink= "/users">Users</a>
+	<a routerLink= "/Vragenlijst">Vraag Aanmaken</a>
 	<a routerLink= "/vragen">Vragen</a>
-	<a routerLink= "/studentAanmaken">Student Aanmaken</a>
+	<a routerLink="/gegevens">Gegevens</a>
+	<a routerLink="/CreeerStudent">Student Aanmaken</a>
 </nav>
 
 
@@ -19,10 +21,6 @@
 <!--<app-user-search></app-user-search>-->
 <div>
 	<h1> Dit is voor het dashboard! </h1>
-
-	<p> Maak user aan 
-		<br><button type="text" (click)=onClick($event)>Nieuwe gebruiker</button>
-	</p>
 
 	<p> Beheer vragenlijst 
 		<br><button type="text" (click)=onClickVragenlijst($event)>Vragenlijst</button>

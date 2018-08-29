@@ -50,7 +50,7 @@ export class LoginAdminComponent implements OnInit {
             this.globalservice.admin.id = admin.id;
             console.log(this.globalservice.admin.id);
           });
-          this.router.navigate(['DashAdmin'])
+          this.router.navigate(['dashboard'])
       }
       });
       
