@@ -49,11 +49,6 @@ button {
 
 }
 
-button: hover {
-    cursor: pointer;
-    background-color: #9d44fb;
-    color: #000;
-}
 
 .avatar {
 /*	background-image: url("C:\Users\marjo\Angular\ProfielenApp\src\assets\Images\logoQienTrans.png");*/
