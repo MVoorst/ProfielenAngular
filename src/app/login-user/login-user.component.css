@@ -1,17 +1,5 @@
 
 
-
-h1 {
-	font-size: 50px;
-	color: #fff;
-	margin-bottom: 10px;
-	opacity: 1;
-	margin-top: 0px;
-	margin-bottom: 50px;
-
-}
-
-
 .container	input[type="text"], input[type="password"], input[placeholder]
 {
     border: none;
@@ -21,31 +9,12 @@ h1 {
     height: 40px;
     width: 90%;
     color: #fff;
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
 
 }
 
-.button {
-    border: none;
-    outline: none;
-    height: 40px;
-    width: 90%;
-    background: #fff;
-    color: #000;
-    font-size: 18px;
-    margin-top: 20px;
-
-}
-
-button: hover {
-    cursor: pointer;
-    background-color: #9d44fb;
-    color: #000;
-}
-
-
-
 label {
 	font-size: 20px;
+    color: #fff;
 }

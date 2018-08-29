@@ -72,6 +72,9 @@ export class LoginUserComponent implements OnInit {
   		this.loginservice.inlogMethodeUser(user).subscribe(
         (response : {message: string}) => {
           console.log(response.message);
+                if (response.message != "Succes"){
+                
+                }
 			    if (response.message == "Success"){
 
           this.loginservice.getuserName(this.globalservice.gebruiker.emailadres).subscribe(
@@ -84,7 +87,7 @@ export class LoginUserComponent implements OnInit {
               this.globalservice.gebruiker.achternaam = user.achternaam;
               this.globalservice.gebruiker.geslacht = user.geslacht;
               this.globalservice.gebruiker.geboortedatum = user.geboortedatum;
-              this.globalservice.gebruiker.huisnummer= user.huisnummer;
+              this.globalservice.gebruiker.huisnummer = user.huisnummer;
               this.globalservice.gebruiker.straat = user.straat;
               this.globalservice.gebruiker.postcode = user.postcode;
               this.globalservice.gebruiker.woonplaats = user.woonplaats;

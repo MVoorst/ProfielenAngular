@@ -1,6 +1,19 @@
 
 <div class="container">
 	<h1>Welkom</h1>
-	<button class="globalbutton globalbutton-ripple" id = "Adminbutton" (click)="RedirectToAdmin()" ngbTooltip="CLick" triggers="click:blur">Admin</button> <br>
-	<button class="globalbutton globalbutton-ripple" id = "UserButton" (click)="RedirectToUser()" >User</button>
+    <p class="txtWit">Deze applicatie is speciaal geschreven om het automatisch genereren van een CV snel en mooi te maken.</p>
+    <p class="txtWit">Kies hieronder welk inlogscherm u wilt zien.</p>
+
+    
+    <div class="row">
+        <div class="col"></div>
+  <div class="col">
+        	<button class="globalbutton globalbutton-ripple" id = "Adminbutton" (click)="RedirectToAdmin()">Admin</button> 
+        </div>
+  <div class="col"></div>
+  <div class="col">
+        <button class="globalbutton globalbutton-ripple" id = "UserButton" (click)="RedirectToUser()" >User</button>
+        </div>	
+        <div class="col"></div>
 </div>
+    </div>

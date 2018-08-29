@@ -8,6 +8,10 @@
     padding-right: 0;
   }
 
+.navbarQien {
+    
+}
+
 a {
     text-decoration: none;
   }
@@ -30,25 +34,10 @@ h4 {
   margin: 0;
 }
   
-.col-1-4 {
+.col-1-2 {
     width: 25%;
 }
 
-.module {
-  padding: 20px;
-  text-align: center;
-  color: #eee;
-  max-height: 120px;
-  min-width: 120px;
-  background-color: #607D8B;
-  border-radius: 2px;
-}
-
-.module:hover {
-  background-color: #EEE;
-  cursor: pointer;
-  color: #607d8b;
-}
 .grid-pad {
   padding: 10px 0;
 }
@@ -73,58 +62,4 @@ h4 {
   }
 }
 
-   
-.container {
-    width: 80%;
-    height: 100%;
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%,-50%);
-    box-sizing: border-box;
-    padding: 5% 70px;
-    background: rgba(111, 86, 122, 0.9)
 
-
-}
-
-h1 {
-    font-size: 50px;
-    color: #fff;
-    margin-bottom: 10px;
-    opacity: 1;
-    margin-top: 0px;
-    margin-bottom: 50px;
-
-}
-
-
-.container  input[type="text"], input[type="password"], input[placeholder]
-{
-    border: none;
-    border-bottom: 1px solid #fff;
-    background: transparent;
-    outline: none;
-    height: 40px;
-    width: 90%;
-    color: #fff;
-    font-size: 30px;
-    text-align: center;
-
-}
-
-.button {
-    border: none;
-    outline: none;
-    height: 40px;
-    width: 90%;
-    background: #fff;
-    color: #000;
-    font-size: 18px;
-    margin-top: 20px;
-
-}
-
-label {
-    font-size: 20px;
-}

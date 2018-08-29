@@ -1,11 +1,18 @@
-<h2>Mijn Vragen</h2>
-<nav>
-    <a routerLink= "/dashboard">Overzicht</a>
-    <a routerLink= "/gegevens">Gegevens</a>
-    <a routerLink= "/vraag1">Vraag 1</a>
-    <a routerLink= "/vraag2">Vraag 2</a>
-    <a routerLink= "/vraag3">Vraag 3</a>
-</nav>
+<div class="container">
+        <div class="row">
+        <div class="col">
+<nav> 
+	<a routerLink= "/dashboard">Overzicht</a>
+	<a routerLink= "/users">Users</a>
+	<a routerLink= "/Vragenlijst">Vraag Aanmaken</a>
+	<a routerLink= "/vragen">Vragen</a>
+	<a routerLink="/gegevens">Gegevens</a>
+	<a routerLink="/CreeerStudent">Student Aanmaken</a>
+            </nav></div></div><br>
+
+         <div class="row"></div>
+        <div class="col"></div>
+    <h2>Mijn Vragen</h2>
 <ul class="vragen">
   <li *ngFor="let vraag of vragen">
     <a routerLink="/detail/{{vraag.id}}">
@@ -13,3 +20,4 @@
     </a>
   </li>
 </ul>
+</div>
