@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Vraag } from '../../vraag';
 import { VraagService } from '../../vraag.service';
 import { GlobalService } from '../../global.service';
+import { DashboardUserService } from './dashboard-user.service';
 
 @Component({
   selector: 'app-dashboard-user',
@@ -11,13 +12,38 @@ import { GlobalService } from '../../global.service';
 export class DashboardUserComponent implements OnInit {
   vragen: Vraag[] = [];
 
-  constructor(private vraagService: VraagService, private globalservice: GlobalService) { }
- 
-  ngOnInit() {
+  constructor(private vraagService: VraagService, private globalservice: GlobalService, private dashboarduserService: DashboardUserService) { }
+  private idVraag: number = 1;
+  private vraag: string;
+  private antwoord: string;
+
+
+  ngOnInit(
+    
+  ) {
+   
   }
 
-  getVragen(): void {
-    this.vraagService.getVragen()
-      .subscribe(vragen => this.vragen = vragen.slice(1, 5));
+  onClick(event: any){
+    this.OphalenVraag();
+    this.OphalenAntwoord();
   }
+
+  OphalenVraag() {
+    this.dashboarduserService.getVraagUser(this.idVraag).subscribe((response :
+    {contentvraag: string}) => {
+      console.log(response.contentvraag);
+      this.vraag = response.contentvraag
+    });
+  }
+
+  OphalenAntwoord() {
+    this.dashboarduserService.getAntwoordUser(this.idVraag).subscribe((response :
+    {antwoord: string}) => {
+      console.log(response.antwoord);
+      this.antwoord = response.antwoord;
+    });
+  }
+  
+  
 }

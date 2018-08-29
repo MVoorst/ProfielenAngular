@@ -28,7 +28,6 @@ const appRoutes: Routes = [
   {path: 'AdminLogin', component: LoginAdminComponent},
   {path: 'UserLogin', component: LoginUserComponent},
   {path: 'DashUser', component: DashboardUserComponent},
-  {path: 'DashAdmin', component : DashboardAdminComponent},
   {path: 'NAW', component: NAWGegevensComponent},
   {path: 'Vraag', component: VraagComponent},
   {path: 'dashboard', component: DashboardAdminComponent},
@@ -37,7 +36,8 @@ const appRoutes: Routes = [
   {path: 'vragen', component: VragenComponent},
   {path: 'CreeerStudent', component: CreeerStudentComponent},
   {path: 'OverzichtNAW', component: OverzichtNAWComponent},
-  {path: 'Vragenlijst', component: VragenlijstComponent}
+  {path: 'Vragenlijst', component: VragenlijstComponent},
+  {path: 'StudentOverzicht', component: StudentenoverzichtComponent}
 ]
 @NgModule({
   declarations: [
