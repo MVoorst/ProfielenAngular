@@ -21,4 +21,9 @@ export class OpeningPageComponent implements OnInit {
   RedirectToUser() {
   	this.router.navigate(['UserLogin'])
   }
+
+  getUrl()
+{
+  return "scr(assets/Images/achievement-agreement-arms-1068523.png)";
+}
 }
