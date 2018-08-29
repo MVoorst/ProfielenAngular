@@ -10,19 +10,10 @@ export class StudentenoverzichtService {
 
   constructor(private httpClient: HttpClient) { }
 
-  private getVraagurl: string = "http://localhost:8082/api/vraag/"
-
   
-	httpOptions = {
-		headers: new HttpHeaders({
-			'Content-Type': 'application/json'
-		})
-  };
+  
+	
   
 
-  getVraag(idVraag: number) {
-    const url= `${this.getVraagurl}${idVraag}`;
-        console.log(url);
-        return this.httpClient.get(url,this.httpOptions);
-  }
+  
 }
