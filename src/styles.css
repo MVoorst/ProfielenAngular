@@ -11,6 +11,7 @@ h1 {
   }
   body {
 	margin: 2em;
+	      background: url(./OF18NR0.jpg);
   }
   body, input[text], button {
 	color: #888;
