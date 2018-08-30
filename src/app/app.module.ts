@@ -38,12 +38,8 @@ const appRoutes: Routes = [
   {path: 'CreeerStudent', component: CreeerStudentComponent},
   {path: 'OverzichtNAW', component: OverzichtNAWComponent},
   {path: 'Vragenlijst', component: VragenlijstComponent},
-<<<<<<< HEAD
-  {path: 'DashAdmin/StudentenOverzicht', component: StudentenoverzichtComponent}
-=======
-  {path: 'StudentOverzicht', component: StudentenoverzichtComponent},
+  {path: 'DashAdmin/StudentenOverzicht', component: StudentenoverzichtComponent},
   {path: 'OverzichtVraag', component: OverzichtVragenComponent}
->>>>>>> master
 ]
 @NgModule({
   declarations: [

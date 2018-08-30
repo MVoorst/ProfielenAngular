@@ -44,6 +44,4 @@ export class DashboardUserComponent implements OnInit {
       this.antwoord = response.antwoord;
     });
   }
-  
-  
 }
