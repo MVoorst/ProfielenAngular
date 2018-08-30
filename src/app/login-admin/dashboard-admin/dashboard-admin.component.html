@@ -1,23 +1,21 @@
 
 <div class="container">
-  <div class="row">
-  <div class="col">
-<nav> 
-<!-- <a routerLink= "/dashboard">Overzicht</a>
-<a routerLink= "/users">Users</a>
-<a routerLink= "/Vragenlijst">Vraag Aanmaken</a>
-<a routerLink= "/vragen">Vragen</a>
-<a routerLink="/gegevens">Gegevens</a>
-<a routerLink="/CreeerStudent">Student Aanmaken</a> -->
 
+
+  <div class="row">
+      <div class="col"></div>
+  <div class="col-*-8">
+<nav> 
 <a routerLink= "/dashboard">Overzicht</a>
 <a routerLink= "/Vragenlijst">Vraag Aanmaken</a>
 <a routerLink="/CreeerStudent">Student Aanmaken</a>
 <a routerLink="/DashAdmin/StudentenOverzicht">Studenten</a>
-      </nav></div></div><br>
+      </nav></div>  <div class="col"></div></div><br>
 
    <div class="row"></div>
   <div class="col"></div>
+
+
 <div class="grid grid-pad">
 <a *ngFor="let user of users" class="col-1-2"
 routerLink="/detail/{{user.id}}">

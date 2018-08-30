@@ -1,3 +1,20 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col"></div>
+    <div class="col-*-8">
+        <nav>
+            <a routerLink="/NAW">NAW gegevens</a>
+            <a routerLink="/OverzichtNAW">Overzicht gegevens</a>
+            <a routerLink="/Vraag">Vragen</a>
+            <a routerLink="/OverzichtVraag">Overzicht Antwoord</a>
+          
+    </nav></div>  <div class="col"></div></div><br>
+  
+     <div class="row"></div>
+    <div class="col"></div>
+  
+
 <h3>Top Vragen</h3>
 <div class="grid grid-pad">
   <a *ngFor="let vraag of vragen" class="col-1-4"
@@ -11,18 +28,9 @@
     <h1> Welkom</h1>
 </div>
 
-<nav>
-        <a routerLink="/NAW">NAW gegevens</a>
-        <a routerLink="/OverzichtNAW">Overzicht gegevens</a>
-        <a routerLink="/Vraag">Vragen</a>
-        <a routerLink="/OverzichtVraag">Overzicht Vraag en Antwoord</a>
-      
-</nav>
-  
-
-
 <div>
     <button (click)="onClick($event)">Ophalen vraag</button>
     {{vraag}}
     {{antwoord}}
+</div>
 </div>

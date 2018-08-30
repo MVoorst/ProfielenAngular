@@ -1,36 +1,33 @@
 <div class="container">
-	<div class="row">
-	<div class="col">
-<nav> 
-		<a routerLink= "/dashboard">Overzicht</a>
-		<a routerLink= "/Vragenlijst">Vraag Aanmaken</a>
-		<a routerLink="/CreeerStudent">Student Aanmaken</a>
-		<a routerLink="/DashAdmin/StudentenOverzicht">Studenten</a>
-<!-- 	
-<a routerLink= "/dashboard">Overzicht</a>
-<a routerLink= "/users">Users</a>
-<a routerLink= "/Vragenlijst">Vraag Aanmaken</a>
-<a routerLink= "/vragen">Vragen</a>
-<a routerLink="/gegevens">Gegevens</a>
-<a routerLink="/CreeerStudent">Student Aanmaken</a> -->
+		<div class="row">
+				<div class="col"></div>
+			<div class="col-*-8">
+		  <nav> 
+		  <a routerLink= "/dashboard">Overzicht</a>
+		  <a routerLink= "/Vragenlijst">Vraag Aanmaken</a>
+		  <a routerLink="/CreeerStudent">Student Aanmaken</a>
+		  <a routerLink="/DashAdmin/StudentenOverzicht">Studenten</a>
+				</nav></div>  <div class="col"></div></div><br>
+		  
+			 <div class="row"></div>
+			<div class="col"></div>
+		  
 
-		</nav></div></div><br>
-
-	 <div class="row"></div>
-	<div class="col"></div>
-
-
-<h1>Nieuwe deelnemer</h1>
-	<p>Maak hier een nieuwe deelnemer aan.</p>
-	<form #NAWForm="ngForm">
-		<div class="form">
-			<label for="username">Gebruikersnaam </label>
-			<input type="text" class="form-control" id="username" required   name="username" (keyup) = "onKey($event)"><br>
-			<label for="email">Emailadres </label>
-			<input type="text" class="form-control" id="email" required  name="email" (keyup) = "onKeyemail($event)">
-			<br><button type="submit" class="button" (click)="onClick($event)"> Opslaan </button>
-	</div>
-</form>
+			<h1>Nieuwe deelnemer</h1>
+			<p>Maak hier een nieuwe deelnemer aan.</p>
+			<form #NAWForm="ngForm">
+				<div class="form">
+					<label for="voornaam">Voornaam </label>
+					<input type="text" class="form-control" id="voornaam" required   name="voornaam" (keyup) = "onKeyvoornaam($event)"><br>
+					<label for="tussenvoegsel">Tussenvoegsel </label>
+					<input type="text" class="form-control" id="tussenvoegsel" required   name="tussenvoegsel" (keyup) = "onKeytussenvoegsel($event)"><br>
+					<label for="voornaam">Achternaam </label>
+					<input type="text" class="form-control" id="achternaam" required   name="achternaam" (keyup) = "onKeyachternaam($event)"><br>
+					<label for="email">Emailadres </label>
+					<input type="text" class="form-control" id="email" required  name="email" (keyup) = "onKeyemail($event)">
+					<br><button type="submit" class="button" (click)="onClick($event)"> Opslaan </button>
+			</div>
+		</form>
 
 
 <div class = "avatar">
