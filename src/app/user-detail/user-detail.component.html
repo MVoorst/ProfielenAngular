@@ -1,8 +1,17 @@
-<nav > 
-    <a routerLink= "/dashboard">dashboard</a>
-    <a routerLink= "/users">Users</a>
-    <a routerLink= "/vragen">Vragen</a>
-</nav>
+<div class="container">
+        <div class="row">
+        <div class="col">
+<nav> 
+	<a routerLink= "/dashboard">Overzicht</a>
+	<a routerLink= "/users">Users</a>
+	<a routerLink= "/Vragenlijst">Vraag Aanmaken</a>
+	<a routerLink= "/vragen">Vragen</a>
+	<a routerLink="/gegevens">Gegevens</a>
+	<a routerLink="/CreeerStudent">Student Aanmaken</a>
+            </nav></div></div><br>
+
+         <div class="row"></div>
+        <div class="col"></div>
 
 <div *ngIf="user">
     <h2>{{user.gebruikersnaam | uppercase}} Details</h2>
@@ -14,3 +23,4 @@
     </div>
     <button (click)="goBack()">go back</button>
   </div>
+</div>
