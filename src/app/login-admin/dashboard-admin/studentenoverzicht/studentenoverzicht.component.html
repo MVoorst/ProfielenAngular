@@ -5,14 +5,12 @@
 	<a routerLink="/DashAdmin/StudentenOverzicht">Studenten</a>
 </nav>
 
-
-
 <div class="container">
     
     <h1>Studentenoverzicht</h1>
 
     	<ul *ngFor= "let deelnemer of deelnemers">
-		<li> {{deelnemer.voornaam}} {{deelnemer.tussenvoegsel}} {{deelnemer.achternaam}} <button type="text" (click)= onClickExporteer(deelnemer)>Exporteer als Word</button><button type="text" (click)= onClickDoorverwijzen(deelnemer)>Studentenpagina</button></li>
-	</ul>
+			<li> {{deelnemer.voornaam}} {{deelnemer.tussenvoegsel}} {{deelnemer.achternaam}} <button type="text" (click)= onClickExporteer(deelnemer)>Exporteer als Word</button><button type="text" (click)= onClickDoorverwijzen(deelnemer)>Studentenpagina</button></li>
+		</ul>
 </div>
             
