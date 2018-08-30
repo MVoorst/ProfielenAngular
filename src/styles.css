@@ -1,12 +1,12 @@
 /* Application-wide Styles */
 h1 {
-color: #6f567a;
+color: #369;
 font-family: 'Titillium Web', sans-serif;;
 font-size: 250%;
 }
 
 h2, h3 {
-color:#6f567a;
+color: #444;
 font-family: 'Titillium Web', sans-serif;;
 font-weight: lighter;
 }
@@ -36,20 +36,14 @@ nav a {
 }
 
 nav a:visited, a:link {
-    color: #6f567a;
+    color: #607d8b;
 }
 
 nav a:hover {
-    color: #cfd8dc;
-    background-color: #6f567a;
+    color: #039be5;
+    background-color: #cfd8dc;
 }
 
 nav a.active {
     color: #039be5;
   }
-
-head img{
-  position: absolute;
-  background-size: cover;
-	background-attachment: fixed;
-}
