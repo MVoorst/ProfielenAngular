@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClient, HttpErrorResponse} from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { RouterModule, Router} from '@angular/router';
-import {VraagService} from "./vraag.service";
+import { VraagService } from "./vraag.service";
 import { DashboardUserService } from '../login-user/dashboard-user/dashboard-user.service';
 
 @Component({
@@ -13,7 +13,6 @@ export class VraagComponent implements OnInit {
   private idVraag: number = 1;
 	public vraagcontent : string;
   public antwoorddeelnemer : string;
-
 
   constructor(private vraagservice: VraagService, private router: Router, private dashboarduserService: DashboardUserService) { }
 
@@ -30,7 +29,6 @@ export class VraagComponent implements OnInit {
   onClick(event: any){
     alert("Antwoord Opgeslagen!");
     this.Antwoorden(this.antwoorddeelnemer);
-      
   	}
 
     Antwoorden(antwoord: string) {
@@ -41,8 +39,7 @@ export class VraagComponent implements OnInit {
             } else {
               console.log("niet gelukt");
             }
-        })
-          
+        })          
       };
 
     OphalenVraag() {
@@ -52,5 +49,4 @@ export class VraagComponent implements OnInit {
         this.vraagcontent = response.contentvraag
         });
       }
-    
 }

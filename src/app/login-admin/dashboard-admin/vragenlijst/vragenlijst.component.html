@@ -1,11 +1,3 @@
-
-<nav > 
-	<a routerLink= "/dashboard">Overzicht</a>
-	<a routerLink= "/users">Users</a>
-	<a routerLink= "/Vragenlijst">Vraag Aanmaken</a>
-	<a routerLink="/CreeerStudent">Student Aanmaken</a>
-</nav>
-
 <div class="container">
 	
 	<h1>Vragenlijst</h1>
@@ -14,9 +6,8 @@
 		<form #Vragenform="ngForm">
 			<div class="form">
 				<label for="id">ID</label>
-				<input type="text" class="form-control" id="id" required name="id" (keyup) = "onKeyID($event)"><br>
-				<label for="vraag">Vraag</label>
-				<input type="text" class="form-control" id="vraag" required   name="vraag" (keyup) = "onKey($event)"><br>
+				<input type="text" class="form-control" id="id" required name="id" (keyup) = "onKeyID($event)"><br><label for="vraag">Vraag</label>
+				<input type="text" class="form-control" id="vraag" required   name="vraag" (keyup) = "onKey($event)">
 				<button type="submit" class="button" (click)="onClick($event)"> Opslaan </button>
 		</div>
 	</form>

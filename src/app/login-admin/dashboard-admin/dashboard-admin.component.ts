@@ -44,9 +44,9 @@ export class DashboardAdminComponent implements OnInit {
   }
 
 
-  onClickVragenlijst(event: any){
-      this.router.navigate(['Vragenlijst'])  
-  }
+    onClickStudentenOverzicht(event : any) {
+      this.router.navigate(['DashAdmin/StudentenOverzicht'])
+
 
 	};
 
