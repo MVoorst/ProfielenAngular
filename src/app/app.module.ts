@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardAdminComponent} from './login-admin/dashboard-admin/dashboard-admin.component'
@@ -38,12 +39,8 @@ const appRoutes: Routes = [
   {path: 'CreeerStudent', component: CreeerStudentComponent},
   {path: 'OverzichtNAW', component: OverzichtNAWComponent},
   {path: 'Vragenlijst', component: VragenlijstComponent},
-<<<<<<< HEAD
-  {path: 'DashAdmin/StudentenOverzicht', component: StudentenoverzichtComponent}
-=======
-  {path: 'StudentOverzicht', component: StudentenoverzichtComponent},
+  {path: 'DashAdmin/StudentenOverzicht', component: StudentenoverzichtComponent},
   {path: 'OverzichtVraag', component: OverzichtVragenComponent}
->>>>>>> master
 ]
 @NgModule({
   declarations: [
@@ -70,6 +67,7 @@ const appRoutes: Routes = [
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    NgbModule,
     RouterModule.forRoot(
       appRoutes,)
   ],

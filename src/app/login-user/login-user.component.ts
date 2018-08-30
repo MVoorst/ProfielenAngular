@@ -20,9 +20,9 @@ export class LoginUserComponent implements OnInit {
   public voornaam: string;
   public tussenvoegsel: string;
   public achternaam: string;
-  public geslacht: boolean;
-  public geboortedatum: number;
-  public huisnummer: number;
+  public geslacht: string;
+  public geboortedatum: string;
+  public huisnummer: string;
   public straat: string;
   public postcode: string;
   public woonplaats: string;
