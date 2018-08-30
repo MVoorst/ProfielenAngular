@@ -1,49 +1,185 @@
 /* Application-wide Styles */
-h1 {
-color: #369;
-font-family: 'Titillium Web', sans-serif;;
-font-size: 250%;
-}
-
 h2, h3 {
-color: #444;
-font-family: 'Titillium Web', sans-serif;;
-font-weight: lighter;
-}
+  color: #444;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+      text-align: center;
+  }
+  
+  body {
+    margin: 2em;
 
-body {
-  margin: 2em;
-  text-align: center;
-}
+    background: url(assets/Images/andyone-26591-unsplash.jpg);
+    background-size: cover;
 
-body, input[text], button {
-  color: #888;
-  font-family: 'Titillium Web', sans-serif;
+    }
+    body, input[text], button {
+    color: #888;
+
+
+  }
+  
+  body, input[text], button {
+    color: #888;
  
-}
+    font-family: Cambria, Georgia;
+  }
+  
+  p {
+          color: #fff;
+  }
+  
+  .container {
+    width: 60%;
+      height: 100%;
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      transform: translate(-50%,-50%);
+      box-sizing: border-box;
+      padding: 5% 70px;
+      background: rgba(111, 86, 122, 0.9)
+          
+  }
+  .img1 {
+      height: 150px;
+      width: 180px;
+      
+  }
+  
+  .globalbutton {
+      opacity: 1;
+      border: 1px solid #fff;
+      outline: none;
+      height: 50px;
+      width: 150px;
+      background: #fff;
+      color: #000;
+      font-size: 18px;
+      border-radius: 0px;
+  }
+  
+  .globalbutton:hover {
+          opacity: 1;
+      cursor: pointer;
+      border: 1px solid #fff;
+      background: #4d004d;
+      color: #fff;
+  }
+  .globalbutton:active {
+   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+      background: purple;
+  }
+  .globalbutton-ripple:active{opacity:0.5}
+  .globalbutton-ripple{transition:opacity 0s}
+  
+  .globalBIGbutton {
+      opacity: 1;
+      border: 1px solid #fff;
+      outline: none;
+      height: 150px;
+      width: 150px;
+      background: #fff;
+      color: #000;
+      font-size: 18px;
+      border-radius: 0px;
+  }
+  
+  .globalBIGbutton:hover {
+          opacity: 1;
+      cursor: pointer;
+      border: 1px solid #fff;
+      background: #4d004d;
+      color: #fff;
+  }
+  .globalBIGbutton:active {
+   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+      background: purple;
+  }
+  .globalBIGbutton-ripple:active{opacity:0.5}
+  .globalBIGbutton-ripple{transition:opacity 0s}
+  
+  
+  h1 {
+    font-size: 50px;
+    color: #fff;
+    margin-bottom: 10px;
+    opacity: 1;
+    margin-top: 0px;
+    margin-bottom: 50px;
+      text-align: center;
+  }
+  
+  
+  .container	input[type="text"], input[type="password"], input[placeholder]
+  {
+      border: none;
+      border-bottom: 1px solid #fff;
+      background: transparent;
+      outline: none;
+      height: 40px;
+      width: 90%;
+      color: #fff;
+      font-size: 30px;
+      text-align: center;
+  
+  }
+  
+  .button {
+      border: black;
+      outline: none;
+      height: 40px;
+      width: 90%;
+      background: #fff;
+      color: #000;
+      font-size: 18px;
+      margin-top: 20px;
+  
+  
+  }
+  
+  button: hover {
+      cursor: pointer;
+      background-color: #9d44fb;
+      color: #000;
+  }
+  
+  
+  
+  label {
+    font-size: 20px;
+  }
+  
   /* everywhere else */
-* {
-	font-family: 'Titillium Web', sans-serif;
+  * {
+    font-family: Arial, Helvetica, sans-serif;
+    }
+  
+  nav a {
+      font-size: 10px;
+      width: 100px;
+      height: 50px;
+      padding-top: 10px;
+      text-align: center;
+      padding: inherit;
+      margin-top: 10px;
+      display: inline-block;
+      background-color: #eee;
+      border-radius: 0px;
+      border-color: #000;
+      border-style: solid;
+      border-width: thin;
   }
-
-nav a {
-    padding: 5px 10px;
-    text-decoration: none;
-    margin-top: 10px;
-    display: inline-block;
-    background-color: #eee;
-    border-radius: 4px;
-}
-
-nav a:visited, a:link {
-    color: #607d8b;
-}
-
-nav a:hover {
-    color: #039be5;
-    background-color: #cfd8dc;
-}
-
-nav a.active {
-    color: #039be5;
+  
+  nav a:visited, a:link {
+      color: #607d8b;
   }
+  
+  nav a:hover {
+      color: #039be5;
+      background-color: #cfd8dc;
+  }
+  
+  nav a.active {
+      color: #039be5;
+    }
