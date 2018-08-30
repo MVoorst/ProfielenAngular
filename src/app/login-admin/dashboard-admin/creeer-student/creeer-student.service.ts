@@ -23,11 +23,8 @@ httpOptions = {
 		//console.log(gebruiker);
 		console.log(user.emailadres);
 		console.log('In methode maakDeelnemerAan');
-<<<<<<< HEAD
-		return this.httpClient.post(this.creeerStudentUrl, user, this.httpOptions);
-=======
+
 		return this.httpClient.post(this.creeerStudentUrl, user, this.httpOptions);		
->>>>>>> master
 	}
 
 }

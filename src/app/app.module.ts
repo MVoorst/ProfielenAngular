@@ -28,7 +28,8 @@ const appRoutes: Routes = [
   {path: 'Vraag', component: VraagComponent},
   {path: 'CreeerStudent', component: CreeerStudentComponent},
   {path: 'OverzichtNAW', component: OverzichtNAWComponent},
-  {path: 'Vragenlijst', component: VragenlijstComponent}
+  {path: 'Vragenlijst', component: VragenlijstComponent},
+  {path: 'DashAdmin/StudentenOverzicht', component: StudentenoverzichtComponent}
 ]
 
 

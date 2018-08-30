@@ -15,6 +15,9 @@ export class CreeerStudentComponent implements OnInit {
 	public id: number;
 	public gebruikersnaam: string = ''
 	public emailadres: string;
+  public voornaam: string;
+  public achternaam: string;
+  public tussenvoegsel: string;
 	gebruiker : User;
   admin: object;
 
@@ -24,9 +27,19 @@ export class CreeerStudentComponent implements OnInit {
   }
 
   
-  	onKey(event: any) {
-  		this.gebruikersnaam = event.target.value;
+  	onKeyvoornaam(event: any) {
+  		this.voornaam = event.target.value;
   	}
+
+
+    onKeyachternaam(event: any) {
+      this.achternaam = event.target.value;
+    }
+
+
+    onKeytussenvoegsel(event: any) {
+      this.tussenvoegsel = event.target.value;
+    }
 
   onKeyemail(event: any) {
       this.emailadres = event.target.value;
@@ -34,9 +47,10 @@ export class CreeerStudentComponent implements OnInit {
 
     onClick(event: any){
     this.gebruiker = new User();
-    this.gebruiker.gebruikersnaam = this.gebruikersnaam;
+    this.gebruiker.voornaam = this.voornaam;
+    this.gebruiker.tussenvoegsel = this.tussenvoegsel;
+    this.gebruiker.achternaam = this.achternaam;
     this.gebruiker.emailadres = this.emailadres;
-    console.log(this.gebruiker.emailadres);
     this.Aanmaken(this.gebruiker);
     }
 
