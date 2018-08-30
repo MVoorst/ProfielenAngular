@@ -20,15 +20,13 @@ export class DashboardUserService {
   };
 
   getVraagUser(idVraag: number) {
-    console.log("in getvraaguser")
     const url= `${this.getVraagurl}${idVraag}`;
     console.log(url);
     return this.httpClient.get(url,this.httpOptions);
   }
 
   getAntwoordUser(idVraag: number) : Observable <{}>{
-    console.log("in get antwoord")
-    const url = `${this.getAntwoordurl}${idVraag}`;
+    const url = `${this.getAntwoordurl}${1}`;
     console.log(url);
     return this.httpClient.get(url,this.httpOptions);
   }

@@ -19,7 +19,8 @@ import { VragenComponent } from './vragen/vragen.component';
 import { VraagDetailComponent } from './vraag-detail/vraag-detail.component'
 import { OverzichtNAWComponent } from './login-user/overzicht-naw/overzicht-naw.component'
 import { VragenlijstComponent } from './login-admin/dashboard-admin/vragenlijst/vragenlijst.component';
-import { StudentenoverzichtComponent } from './login-admin/dashboard-admin/studentenoverzicht/studentenoverzicht.component'
+import { StudentenoverzichtComponent } from './login-admin/dashboard-admin/studentenoverzicht/studentenoverzicht.component';
+import { OverzichtVragenComponent } from './login-user/overzicht-vragen/overzicht-vragen.component'
 
 
 const appRoutes: Routes = [
@@ -37,7 +38,12 @@ const appRoutes: Routes = [
   {path: 'CreeerStudent', component: CreeerStudentComponent},
   {path: 'OverzichtNAW', component: OverzichtNAWComponent},
   {path: 'Vragenlijst', component: VragenlijstComponent},
-  {path: 'StudentOverzicht', component: StudentenoverzichtComponent}
+<<<<<<< HEAD
+  {path: 'DashAdmin/StudentenOverzicht', component: StudentenoverzichtComponent}
+=======
+  {path: 'StudentOverzicht', component: StudentenoverzichtComponent},
+  {path: 'OverzichtVraag', component: OverzichtVragenComponent}
+>>>>>>> master
 ]
 @NgModule({
   declarations: [
@@ -58,6 +64,7 @@ const appRoutes: Routes = [
     OverzichtNAWComponent,
     VragenlijstComponent,
     StudentenoverzichtComponent,
+    OverzichtVragenComponent,
   ],
   imports: [
     BrowserModule,

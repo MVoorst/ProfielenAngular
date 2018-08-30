@@ -20,7 +20,9 @@ h1 {
     margin-bottom: 50px;
 
 }
-
+li {
+    color: #fff;
+}
 .button {
     border: none;
     outline: none;
