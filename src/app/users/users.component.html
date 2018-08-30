@@ -1,0 +1,17 @@
+<nav > 
+	<a routerLink= "/dashboard">Overzicht</a>
+	<a routerLink= "/users">Users</a>
+	<a routerLink= "/vragen">Vragen</a>
+	<a routerLink= "/studentAanmaken">Student Aanmaken</a>
+</nav>
+
+
+<h2>My Users</h2>
+<p>{{yoyo}}</p>
+<ul class="users">
+  <li *ngFor="let user of users">
+    <a routerLink="/detail/{{user.id}}">
+      <span class="badge">{{user.id}}</span>{{user.gebruikersnaam}}
+      </a>
+  </li>
+</ul>

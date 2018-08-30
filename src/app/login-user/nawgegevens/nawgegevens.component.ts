@@ -11,7 +11,6 @@ import { GlobalService } from '../../global.service';
   styleUrls: ['./nawgegevens.component.css']
 })
 
-
 export class NAWGegevensComponent implements OnInit {
   public id: number;
 	public gebruikersnaam: string = this.globalservice.gebruiker.gebruikersnaam;
@@ -31,7 +30,6 @@ export class NAWGegevensComponent implements OnInit {
   public githubadres: string;
 
   constructor(private globalservice: GlobalService, private nawgegevensservice: NawgegevensService, private router: Router) { }
-
 
   ngOnInit() {
   }
@@ -84,7 +82,6 @@ export class NAWGegevensComponent implements OnInit {
     this.Opslaan(this.globalservice.gebruiker)
    }
 
-
   Opslaan(newNAW){
     console.log("In Opslaan");
     console.log(newNAW);
@@ -92,7 +89,6 @@ export class NAWGegevensComponent implements OnInit {
  
       if (response == this.globalservice.gebruiker.id) {
         alert("Opgeslagen");
-        this.router.navigate(['OverzichtNAW']);
       } 
       
     });

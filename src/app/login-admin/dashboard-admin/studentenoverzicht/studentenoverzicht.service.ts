@@ -4,9 +4,6 @@ import {HttpHeaders} from '@angular/common/http';
 import {Observable, of} from 'rxjs';
 import { User } from '../../../user';
 
-
-
-
 @Injectable({
   providedIn: 'root'
 })

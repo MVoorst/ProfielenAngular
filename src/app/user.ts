@@ -57,7 +57,5 @@ export class User {
 		if (githubadres!=null) {
 			this.githubadres = githubadres;
 			}
-
 		}
-
 	}

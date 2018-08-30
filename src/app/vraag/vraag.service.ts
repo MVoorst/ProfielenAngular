@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {HttpHeaders} from '@angular/common/http';
+import {GlobalService} from '../global.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class VraagService {
-	private url: string = "http://localhost:8082/api/vraag";
+	private antwoordurl: string = "http://localhost:8082/api/invultaak/idvraag=";
 
 	httpOptions = {
 		headers: new HttpHeaders({
@@ -14,7 +15,13 @@ export class VraagService {
 		})
 	};
 
-  constructor(private httpClient: HttpClient) { 
+  constructor(private httpClient: HttpClient, private globalService: GlobalService) { 
   	
-  	}
+		}
+	
+	AntwoordenPost(antwoord: string) {
+		const url =  `${this.antwoordurl}${1}/iduser=${this.globalService.gebruiker.id}/${antwoord}`;
+		console.log(url);
+		return this.httpClient.post(url, antwoord, this.httpOptions);
+	}
 }

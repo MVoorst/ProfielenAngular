@@ -32,7 +32,7 @@ export class LoginUserComponent implements OnInit {
 	constructor(private httpclient: HttpClient, private loginservice: LoginService, private router: Router, private globalservice: GlobalService){}
 
   	ngOnInit() {
- 	}
+   }
 
   	onKey(event: any) {
   		this.emailadres = event.target.value;
@@ -67,10 +67,10 @@ export class LoginUserComponent implements OnInit {
   	Inloggen(user){															//USERRRRRR
   		console.log(this.globalservice.gebruiker);
       console.log(user);
-  		this.loginservice.inlogMethodeUser(user).subscribe((response : 
-        {message: string}) => {
-        console.log(response.message);
-			  if (response.message == "Success"){
+  		this.loginservice.inlogMethodeUser(user).subscribe(
+        (response : {message: string}) => {
+          console.log(response.message);
+			    if (response.message == "Success"){
 
           this.loginservice.getuserName(this.globalservice.gebruiker.emailadres).subscribe(
             (user : User) => {
@@ -91,7 +91,7 @@ export class LoginUserComponent implements OnInit {
 
               console.log(this.globalservice.gebruiker.id);
             });
-				this.router.navigate(['NAW'])
+				this.router.navigate(['DashUser'])
 			}
 			});
 			

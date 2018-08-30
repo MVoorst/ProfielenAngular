@@ -1,8 +1,55 @@
+/* Application-wide Styles */
+h1 {
+color: #6f567a;
+font-family: 'Titillium Web', sans-serif;;
+font-size: 250%;
+}
+
+h2, h3 {
+color:#6f567a;
+font-family: 'Titillium Web', sans-serif;;
+font-weight: lighter;
+}
+
 body {
-	
-	background-size: cover;
-	background-attachment: fixed;
+  margin: 2em;
+  text-align: center;
+}
+
+body, input[text], button {
+  color: #888;
+  font-family: 'Titillium Web', sans-serif;
+ 
+}
+  /* everywhere else */
+* {
 	font-family: 'Titillium Web', sans-serif;
-	text-align: center;
-	color: black;
+  }
+
+nav a {
+    padding: 5px 10px;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+    background-color: #eee;
+    border-radius: 4px;
+}
+
+nav a:visited, a:link {
+    color: #6f567a;
+}
+
+nav a:hover {
+    color: #cfd8dc;
+    background-color: #6f567a;
+}
+
+nav a.active {
+    color: #039be5;
+  }
+
+head img{
+  position: absolute;
+  background-size: cover;
+	background-attachment: fixed;
 }

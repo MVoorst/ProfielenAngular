@@ -1,0 +1,11 @@
+<div *ngIf="vraag">
+
+    <h2>{{vraag.contentvraag | uppercase}} Details</h2>
+    <div><span>id: </span>{{vraag.id}}</div>
+    <div>
+      <label>contentvraag:
+        <input [(ngModel)]="vraag.contentvraag" placeholder="contentvraag"/>
+      </label>
+    </div>
+    <button (click)="goBack()">go back</button>  
+  </div>
