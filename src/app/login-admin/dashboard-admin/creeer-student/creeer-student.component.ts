@@ -51,6 +51,7 @@ export class CreeerStudentComponent implements OnInit {
     this.gebruiker.tussenvoegsel = this.tussenvoegsel;
     this.gebruiker.achternaam = this.achternaam;
     this.gebruiker.emailadres = this.emailadres;
+    alert(this.voornaam + " " + this.achternaam + " is toegevoegd. Mail verzonden!");
     this.Aanmaken(this.gebruiker);
     }
 
